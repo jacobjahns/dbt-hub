@@ -1,0 +1,89 @@
+@import '_variables.scss';
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  padding: 1rem 0;
+
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 1rem 0;
+  }
+  
+  .auth-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .auth-headline {
+      text-align: center;
+      font-size: 1.9rem;
+      padding: 6px 0;
+    }
+    .auth-other {
+      text-align: center;
+      font-size: 1rem;
+      color: $label-color;
+
+      &:hover {
+        color: lighten($label-color, 20%);
+      }
+    }
+  }
+
+  .auth-body .auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .auth-form-field {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      padding: 1rem 0;
+
+      .auth-form-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+
+        label {
+          padding-left: 4px;
+          padding-top: 1px;
+        }
+      }
+
+      label {
+        font-size: .9rem;
+        padding-bottom: 4px;
+      }
+
+      input {
+        font-size: 1rem;
+
+        &[type="submit"] {
+          &:active {
+            background-color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .auth-recover-password {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      a {
+        font-size: .7rem;
+      }
+    } 
+  }
+}

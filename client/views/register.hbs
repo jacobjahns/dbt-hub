@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6ea270afe6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/auth.css">
+    <title>Verhaltensexperimente</title>
+  </head>
+
+  <body>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobileNav mobileOff">
+    <nav id="mobNavBar">
+        <div id="mobNavLeft">
+            <a href="javascript:void(0);">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+        <div id="titleBox">
+            <a href="/" id="title">DBT-Hub</a>
+        </div>
+        <div id="mobNavRight">
+            <a href="javascript:void(0);" id="bars" onclick="navMenuOpen()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            <a href="javascript:void(0);" id="xMark" onclick="navMenuOpen()">
+                <i class="fa-solid fa-xmark fa-lg"></i>
+            </a>
+        </div>
+    </nav>
+    <nav id="mobNavDropdown">
+        <div><a href="/vexperiment">VExperiment</a></div>
+        <div><a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a></div>
+    </nav>
+    </nav>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="desktopNav desktopON">
+    <div id="deskNavLeft">
+        <a href="/vexperiment">VExperiment</a>
+    </div>
+        <div id="titleBox">
+        <a id="title" href="/">DBT-Hub</a>
+    </div>
+    <div id="deskNavRight">
+        <a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a>
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa-solid fa-user"></i></a>
+    </div>
+    </nav>
+
+    <!-- Top Navigation Gap -->
+    <div style="padding: 40px;"></div>
+
+    {{!-- main content --}}
+    <main class="login auth">
+      <section class="auth-header">
+        <a href="/user/login" class="auth-other">Anmelden</a>
+        <div class="auth-headline">Registrieren</div>
+      </section>
+      <section class="auth-body">
+        <form action="/user/register" method="post" class="auth-form" id="login-form">
+          <div class="auth-form-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="auth-input">
+          </div>
+          <div class="auth-form-field">
+            <label for="password">Passwort</label>
+            <input type="password" name="password" class="auth-input">
+          </div>
+          <div class="auth-form-field">
+            <div class="auth-form-wrap">
+              <input type="checkbox" name="stay" class="auth-input" id="auth-input-stay">
+              <label for="stay">Angemeldet bleiben</label>
+            </div>
+          </div>
+          <div class="auth-form-field">
+            <input type="submit" value="Registrieren" class="auth-submit">
+          </div>
+        </form>
+      </section>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,439 @@
+@charset "UTF-8";
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+.auth section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+
+.auth .auth-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth .auth-header .auth-headline {
+  text-align: center;
+  font-size: 1.9rem;
+  padding: 6px 0;
+}
+
+.auth .auth-header .auth-other {
+  text-align: center;
+  font-size: 1rem;
+  color: #363636;
+}
+
+.auth .auth-header .auth-other:hover {
+  color: dimgray;
+}
+
+.auth .auth-body .auth-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.auth .auth-body .auth-form .auth-form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.auth .auth-body .auth-form .auth-form-field .auth-form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.auth .auth-body .auth-form .auth-form-field .auth-form-wrap label {
+  padding-left: 4px;
+  padding-top: 1px;
+}
+
+.auth .auth-body .auth-form .auth-form-field label {
+  font-size: .9rem;
+  padding-bottom: 4px;
+}
+
+.auth .auth-body .auth-form .auth-form-field input {
+  font-size: 1rem;
+}
+
+.auth .auth-body .auth-form .auth-form-field input[type="submit"]:active {
+  background-color: #f3461b;
+}
+
+.auth .auth-body .auth-form .auth-recover-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.auth .auth-body .auth-form .auth-recover-password a {
+  font-size: .7rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-smooth: always;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Gill Sans", Helvetica, sans-serif;
+}
+
+:root,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  display: block;
+}
+
+input {
+  border: 1px solid rgba(17, 17, 17, 0.4);
+  border-radius: 5px;
+}
+
+input[type='text'], input[type='password'], input[type='email'] {
+  border: none;
+  border-bottom: 1px solid #363636;
+  border-radius: 0;
+}
+
+input[type='submit'] {
+  -webkit-appearance: none;
+  padding: 0.4rem 0.3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ef692f;
+  border: 2px solid #ef692f;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+}
+
+input[type='submit']:active {
+  color: #ef692f;
+  background-color: #fff;
+  border: 2px solid #ef692f;
+}
+
+input[type='submit']:disabled {
+  cursor: default;
+  color: #8f8f8f;
+  background-color: #fff;
+  border-color: #8f8f8f;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+  color: #183f39;
+  font-weight: 600;
+}
+
+hr {
+  width: 52px;
+  color: #e2e2e2;
+  border-style: solid;
+  margin: 24px auto 30px auto;
+}
+
+/* Mobile Nav */
+.mobileNav {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#mobNavBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #183f39;
+}
+
+#mobNavBar #titleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mobNavBar #mobNavRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+}
+
+#mobNavBar #mobNavRight a {
+  color: white;
+  padding: 15px 20px;
+  font-size: 32px;
+}
+
+#mobNavBar #mobNavLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+}
+
+#mobNavBar #mobNavLeft a {
+  color: white;
+  padding: 15px 20px;
+  font-size: 32px;
+}
+
+#xMark {
+  display: none;
+  background-color: #12302c;
+}
+
+#mobNavDropdown {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  background-color: #12302c;
+}
+
+#mobNavDropdown div {
+  padding: 18px 20px;
+  border-bottom: 1px solid #ffffff32;
+}
+
+#mobNavDropdown a {
+  color: #f7f7f7;
+  text-decoration: none;
+  padding: 18px 20px;
+  font-size: 32px;
+}
+
+/* Desktop Nav */
+@media only screen and (min-width: 1024px) {
+  .mobileOff {
+    display: none !important;
+  }
+  .desktopON {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+.desktopNav {
+  display: none;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #183f39;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.desktopNav #titleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33.3333%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktopNav #deskNavRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33.3333%;
+}
+
+.desktopNav #deskNavRight a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.desktopNav #deskNavRight a:hover {
+  background-color: #12302c;
+}
+
+.desktopNav #deskNavLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33.3333%;
+}
+
+.desktopNav #deskNavLeft a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.desktopNav #deskNavLeft a:hover {
+  background-color: #12302c;
+}
+
+/* General */
+#title {
+  color: white;
+  font-size: 33px;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 15px 20px;
+}
+
+/* Gefühl-AHA Tabelle */
+#gefuehlTab {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+/*   a.icon {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+
+    transition: all .2s;
+
+    &:hover {
+      margin-right: 0;
+    }
+  }
+} */
+/*# sourceMappingURL=style.css.map */

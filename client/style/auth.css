@@ -1,0 +1,134 @@
+main.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+main.auth section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+
+main.auth .auth-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.auth .auth-header .auth-headline {
+  text-align: center;
+  font-size: 1.9rem;
+  padding: 6px 0;
+}
+
+main.auth .auth-header .auth-other {
+  text-align: center;
+  font-size: 1rem;
+  color: #363636;
+}
+
+main.auth .auth-header .auth-other:hover {
+  color: dimgray;
+}
+
+main.auth .auth-body .auth-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main.auth .auth-body .auth-form .auth-form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem 0;
+}
+
+main.auth .auth-body .auth-form .auth-form-field .auth-form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+main.auth .auth-body .auth-form .auth-form-field .auth-form-wrap label {
+  padding-left: 4px;
+  padding-top: 1px;
+}
+
+main.auth .auth-body .auth-form .auth-form-field label {
+  font-size: .9rem;
+  padding-bottom: 4px;
+}
+
+main.auth .auth-body .auth-form .auth-form-field input {
+  font-size: 1rem;
+}
+
+main.auth .auth-body .auth-form .auth-form-field input[type="submit"]:active {
+  background-color: #f3461b;
+}
+
+main.auth .auth-body .auth-form .auth-recover-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.auth .auth-body .auth-form .auth-recover-password a {
+  font-size: .7rem;
+}
+/*# sourceMappingURL=auth.css.map */
