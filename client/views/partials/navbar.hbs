@@ -1,8 +1,9 @@
 <!-- Mobile Navigation Menu -->
-<nav class="mobileNav mobileOff">
+<section class="mobileNav mobileOff">
+
     <nav id="mobNavBar">
         <div id="mobNavLeft">
-            <a href="javascript:void(0);">
+            <a href="javascript:void(0);" id="userIcon" onclick="mobAuthMenu()">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
@@ -18,25 +19,25 @@
             </a>
         </div>
     </nav>
+
     <nav id="mobNavDropdown">
         <div><a href="/vexperiment">VExperiment</a></div>
         <div><a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a></div>
     </nav>
 
-
-    <section id="mobNavAuth" class="auth">
-        
+    <div id="mobNavAuth" class="auth">  
         {{> auth}}
+    </div>
 
-    </section>
-
-
-</nav>
+</section>
 
 
 <!-- Desktop Navigation Menu -->
-<nav class="desktopNav desktopON">
+<div class="desktopNav">
+<nav class="deskNavBar desktopON">
     <div id="deskNavLeft">
+        <a href="javascript:void(0);" id="deskUserIcon" onclick="deskAuthMenu()">
+            <i class="fa-solid fa-user"></i></a>
         <a href="/vexperiment">VExperiment</a>
     </div>
         <div id="titleBox">
@@ -44,12 +45,14 @@
     </div>
     <div id="deskNavRight">
         <a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a>
-        <a href="javascript:void(0);" class="icon">
-            <i class="fa-solid fa-user"></i></a>
     </div>
 </nav>
+    <div id="deskNavAuth" class="auth">  
+        {{> auth}}
+    </div>
+</div>
 
 
 <!-- Top Navigation Gap -->
-    <div style="padding: 40px;"></div>
+<div style="padding: 40px;"></div>
 

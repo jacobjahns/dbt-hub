@@ -7,50 +7,7 @@
 </head>
 <body>
 
-<!-- Mobile Navigation Menu -->
-<nav class="mobileNav mobileOff">
-    <nav id="mobNavBar">
-        <div id="mobNavLeft">
-            <a href="javascript:void(0);">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-        <div id="titleBox">
-            <a href="/" id="title">DBT-Hub</a>
-        </div>
-        <div id="mobNavRight">
-            <a href="javascript:void(0);" id="bars" onclick="navMenuOpen()">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-            <a href="javascript:void(0);" id="xMark" onclick="navMenuOpen()">
-                <i class="fa-solid fa-xmark fa-lg"></i>
-            </a>
-        </div>
-    </nav>
-    <nav id="mobNavDropdown">
-        <div><a href="/vexperiment">VExperiment</a></div>
-        <div><a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a></div>
-    </nav>
-</nav>
-
-<!-- Desktop Navigation Menu -->
-
-<nav class="desktopNav desktopON">
-    <div id="deskNavLeft">
-        <a href="/vexperiment">VExperiment</a>
-    </div>
-        <div id="titleBox">
-        <a id="title" href="/">DBT-Hub</a>
-    </div>
-    <div id="deskNavRight">
-        <a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a>
-        <a href="javascript:void(0);" class="icon">
-            <i class="fa-solid fa-user"></i></a>
-    </div>
-</nav>
-
-<!-- Top Navigation Gap -->
-    <div style="padding: 40px;"></div>
+{{> navbar}}
 
 <!-- Site Content -->
     <h1>Home</h1>

@@ -121,7 +121,7 @@ hr{
 
 #xMark {
   display: none;
-  background-color: #12302c;
+  background-color: darken($BG-color, $amount: 4%);
 }
 
 #mobNavDropdown {
@@ -129,7 +129,7 @@ hr{
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
-  background-color: #12302c;
+  background-color: darken($BG-color, $amount: 4%);
 
   div {
     padding: 18px 20px;
@@ -155,51 +155,55 @@ hr{
 }
 
 .desktopNav {
-  display: none;
-  align-items: stretch;
-  justify-content: space-between;
-  background-color: #183f39;
   position: fixed;
   z-index: 10000;
   top: 0;
   left: 0;
   right: 0;
 
-  #titleBox {
-    display: flex;
-    width: 33.3333%;
-    justify-content: center;
-    align-items: center;
-  }
-  #deskNavRight {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 33.3333%;
-     a {
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-      font-size: 28px;
-      font-weight: 400;
-      &:hover {
-        background-color: #12302c;         
+
+  .deskNavBar {
+    display: none;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: $BG-color;
+
+    #titleBox {
+      display: flex;
+      width: 33.3333%;
+      justify-content: center;
+      align-items: center;
+    }
+    #deskNavRight {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 33.3333%;
+      a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: 400;
+        &:hover {
+          background-color: $BGdark-color;         
+        }
       }
     }
-  }
-  #deskNavLeft {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 33.3333%;
-    a {
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-      font-size: 28px;
-      font-weight: 400;
-      &:hover {
-        background-color: #12302c;         
+    #deskNavLeft {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 33.3333%;
+      a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: 400;
+        &:hover {
+          background-color: #12302c;         
+        }
       }
     }
   }
@@ -209,10 +213,10 @@ hr{
 
 #title {
   color: white;
-  font-size: 33px;
+  font-size: 35px;
   text-decoration: none;
   font-weight: bolder;
-  padding: 15px 20px;
+  padding: 3px 3px;
 }
 
 /* Gefühl-AHA Tabelle */

@@ -1,8 +1,15 @@
 @charset "UTF-8";
+#mobNavAuth {
+  display: none;
+  position: fixed;
+}
+
+#deskNavAuth {
+  display: none;
+  position: fixed;
+}
+
 .auth {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -10,7 +17,8 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 1rem 0;
+  background-color: #12302c;
+  padding: 2rem 3rem;
 }
 
 .auth section {
@@ -47,16 +55,12 @@
   text-align: center;
   font-size: 1.9rem;
   padding: 6px 0;
+  color: white;
 }
 
 .auth .auth-header .auth-other {
   text-align: center;
   font-size: 1rem;
-  color: #363636;
-}
-
-.auth .auth-header .auth-other:hover {
-  color: dimgray;
 }
 
 .auth .auth-body .auth-form {
@@ -101,11 +105,13 @@
 .auth .auth-body .auth-form .auth-form-field .auth-form-wrap label {
   padding-left: 4px;
   padding-top: 1px;
+  color: white;
 }
 
 .auth .auth-body .auth-form .auth-form-field label {
   font-size: .9rem;
   padding-bottom: 4px;
+  color: white;
 }
 
 .auth .auth-body .auth-form .auth-form-field input {
@@ -327,6 +333,14 @@ hr {
 }
 
 .desktopNav {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.desktopNav .deskNavBar {
   display: none;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -335,14 +349,9 @@ hr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #183f39;
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
-.desktopNav #titleBox {
+.desktopNav .deskNavBar #titleBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +364,7 @@ hr {
           align-items: center;
 }
 
-.desktopNav #deskNavRight {
+.desktopNav .deskNavBar #deskNavRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,19 +377,19 @@ hr {
   width: 33.3333%;
 }
 
-.desktopNav #deskNavRight a {
+.desktopNav .deskNavBar #deskNavRight a {
   color: white;
-  padding: 15px 20px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
 }
 
-.desktopNav #deskNavRight a:hover {
+.desktopNav .deskNavBar #deskNavRight a:hover {
   background-color: #12302c;
 }
 
-.desktopNav #deskNavLeft {
+.desktopNav .deskNavBar #deskNavLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,25 +402,25 @@ hr {
   width: 33.3333%;
 }
 
-.desktopNav #deskNavLeft a {
+.desktopNav .deskNavBar #deskNavLeft a {
   color: white;
-  padding: 15px 20px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
 }
 
-.desktopNav #deskNavLeft a:hover {
+.desktopNav .deskNavBar #deskNavLeft a:hover {
   background-color: #12302c;
 }
 
 /* General */
 #title {
   color: white;
-  font-size: 33px;
+  font-size: 35px;
   text-decoration: none;
   font-weight: bolder;
-  padding: 15px 20px;
+  padding: 3px 3px;
 }
 
 /* Gefühl-AHA Tabelle */

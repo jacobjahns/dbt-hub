@@ -1,11 +1,21 @@
 @import '_variables.scss';
 
+
+#mobNavAuth {
+  display: none;
+  position: fixed;
+}
+
+#deskNavAuth {
+  display: none;
+  position: fixed;
+}
+
 .auth {
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
-  padding: 1rem 0;
+  background-color: $BGdark-color;
+  padding: 2rem 3rem;
 
   section {
     display: flex;
@@ -25,15 +35,11 @@
       text-align: center;
       font-size: 1.9rem;
       padding: 6px 0;
+      color: white;
     }
     .auth-other {
       text-align: center;
       font-size: 1rem;
-      color: $label-color;
-
-      &:hover {
-        color: lighten($label-color, 20%);
-      }
     }
   }
 
@@ -57,12 +63,14 @@
         label {
           padding-left: 4px;
           padding-top: 1px;
+          color: white;
         }
       }
 
       label {
         font-size: .9rem;
         padding-bottom: 4px;
+        color: white;
       }
 
       input {
