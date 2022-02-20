@@ -1,0 +1,39 @@
+@import '_variables.scss';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    background-color: $BG-color;
+
+    .fooLinks{
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        
+        a {
+            margin: 15px 25px;
+            padding: 8px 8px;
+            color: #f7f7f7;
+            text-decoration: none;
+            font-size: 20px;
+            color: $link-color;
+            border-bottom: 1px solid #ffffff32;
+        }
+    }
+
+    .fooNotes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        
+        div{
+            margin: 18px 20px;
+            color: #f7f7f7;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    }
+}

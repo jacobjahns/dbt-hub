@@ -18,7 +18,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #12302c;
-  padding: 2rem 3rem;
+  padding: 1.5rem 3rem;
 }
 
 .auth section {
@@ -137,82 +137,6 @@
 
 .auth .auth-body .auth-form .auth-recover-password a {
   font-size: .7rem;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-smooth: always;
-}
-
-:root {
-  font-size: 16px;
-  font-family: "Gill Sans", Helvetica, sans-serif;
-}
-
-:root,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-label {
-  display: block;
-}
-
-input {
-  border: 1px solid rgba(17, 17, 17, 0.4);
-  border-radius: 5px;
-}
-
-input[type='text'], input[type='password'], input[type='email'] {
-  border: none;
-  border-bottom: 1px solid #363636;
-  border-radius: 0;
-}
-
-input[type='submit'] {
-  -webkit-appearance: none;
-  padding: 0.4rem 0.3rem;
-  cursor: pointer;
-  color: #fff;
-  background-color: #ef692f;
-  border: 2px solid #ef692f;
-  font-size: 1.2rem;
-  -webkit-transition: all 0.05s;
-  transition: all 0.05s;
-}
-
-input[type='submit']:active {
-  color: #ef692f;
-  background-color: #fff;
-  border: 2px solid #ef692f;
-}
-
-input[type='submit']:disabled {
-  cursor: default;
-  color: #8f8f8f;
-  background-color: #fff;
-  border-color: #8f8f8f;
-}
-
-input:focus {
-  outline: none;
-}
-
-h1 {
-  text-align: center;
-  color: #183f39;
-  font-weight: 600;
-}
-
-hr {
-  width: 52px;
-  color: #e2e2e2;
-  border-style: solid;
-  margin: 24px auto 30px auto;
 }
 
 /* Mobile Nav */
@@ -421,6 +345,144 @@ hr {
   text-decoration: none;
   font-weight: bolder;
   padding: 3px 3px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  background-color: #183f39;
+}
+
+.footer .fooLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.footer .fooLinks a {
+  margin: 15px 25px;
+  padding: 8px 8px;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 20px;
+  color: #efac28;
+  border-bottom: 1px solid #ffffff32;
+}
+
+.footer .fooNotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.footer .fooNotes div {
+  margin: 18px 20px;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-smooth: always;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Gill Sans", Helvetica, sans-serif;
+}
+
+:root,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  display: block;
+}
+
+input {
+  border: 1px solid rgba(17, 17, 17, 0.4);
+  border-radius: 5px;
+}
+
+input[type='text'], input[type='password'], input[type='email'] {
+  border: none;
+  border-bottom: 1px solid #363636;
+  border-radius: 0;
+}
+
+input[type='submit'] {
+  -webkit-appearance: none;
+  padding: 0.4rem 0.3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ef692f;
+  border: 2px solid #ef692f;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+}
+
+input[type='submit']:active {
+  color: #ef692f;
+  background-color: #fff;
+  border: 2px solid #ef692f;
+}
+
+input[type='submit']:disabled {
+  cursor: default;
+  color: #8f8f8f;
+  background-color: #fff;
+  border-color: #8f8f8f;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+  color: #183f39;
+  font-weight: 600;
+}
+
+hr {
+  width: 52px;
+  color: #e2e2e2;
+  border-style: solid;
+  margin: 24px auto 30px auto;
 }
 
 /* Gefühl-AHA Tabelle */
