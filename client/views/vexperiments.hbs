@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6ea270afe6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/vex.css">
+    <title>Verhaltensexperimente</title>
+  </head>
+
+  <body>
+
+{{> navbar}}
+
+    <!-- Site Content -->
+    <h1>Verhaltensexperimente</h1>
+    <main class="content">
+      <section class="vex-all">
+        <ul class="vex-all-list">
+          {{#if errMsg}}
+          <li class="item" id="err-msg">{{errMsg}}</li>
+          {{/if}}
+          {{#each vexperiments}}
+          <li class="vex" id="{{this._id}}">
+            <div class="vex-name">{{this.name}}</div>
+            <div class="vex-situation">{{this.situation}}</div>
+          </li>
+          {{/each}}
+        </ul>
+      </section>
+    </main>
+
+    <section id="vex-new" class="vex-new" style="display: none;">
+      <h2 class="vex-new-headline">Neues Verhaltensexperiment</h2>
+      <form action="/v/" method="post" class="vex-new-form">
+        <div class="vex-new-form-field">
+          <label for="vexName">Name</label>
+          <input type="text" name="vexName" id="vexName">
+        </div>
+        <div class="vex-new-form-field">
+          <input type="submit" value="Erstellen">
+        </div>
+      </form>
+    </section>
+    
+    <section class="vex-new-button">
+      <div onclick="toggleVexCreation()">+</div>
+    </section>
+    <script>
+      const checkVexCreation = () => {
+        document.getElementById('vex-new').style.display = new URLSearchParams(window.location.search).get('neues-vex') ? 'flex' : 'none';
+      }
+      checkVexCreation();
+
+      const toggleVexCreation = () => {
+        const searchParams = new URLSearchParams(window.location.search);
+
+        if(searchParams.get('neues-vex')) searchParams.delete('neues-vex');
+        else searchParams.set('neues-vex', '1');
+
+        window.history.replaceState({}, '', `${location.pathname}?${searchParams}`);
+
+        checkVexCreation();
+      }
+    </script>
+
+    {{> footer}}
+
+  </body>
+
+  <script src="../style/style.js"></script>
+
+</html>

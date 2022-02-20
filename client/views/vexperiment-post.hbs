@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6ea270afe6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/vex.css">
+    <title>{{vex.name}} - Verhaltensexperiment</title>
+  </head>
+
+  <body>
+    {{> navbar}}
+
+    <main class="content vex-pre">
+      {{#with vex}}
+      <section class="vex-header">
+        <h1 class="vex-headline">{{name}}</h1>
+        <h2 class="vex-date">{{date}}</h2>
+      </section>
+      <section class="vex-body">
+        <form action="/v/new/{{_id}}/post" method="post" class="vex-form vex-post-form">
+          <div class="vex-form-field">
+            <label for="ergebnis">Ergebnis</label>
+            <input type="text" name="ergebnis" class="vex-input" value="{{ergebnis}}">
+          </div>
+          <div class="vex-form-field">
+            <label for="lernerfahrungen">Lernerfahrungen</label>
+            <input type="text" name="lernerfahrungen" class="vex-input" value="{{lernerfahrungen}}">
+          </div>
+          <div class="vex-form-field">
+            <input type="submit" value="Speichern">
+          </div>
+        </form>
+      </section>
+      {{/with}}
+    </main>
+
+    {{> footer}}
+  </body>
+
+  <script src="../style/style.js"></script>
+
+</html>
