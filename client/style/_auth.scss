@@ -1,16 +1,5 @@
 @import '_variables.scss';
 
-
-#mobNavAuth {
-  display: none;
-  position: fixed;
-}
-
-#deskNavAuth {
-  display: none;
-  position: fixed;
-}
-
 .auth {
   flex-direction: column;
   justify-content: space-evenly;

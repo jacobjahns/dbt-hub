@@ -1,14 +1,4 @@
 @charset "UTF-8";
-#mobNavAuth {
-  display: none;
-  position: fixed;
-}
-
-#deskNavAuth {
-  display: none;
-  position: fixed;
-}
-
 .auth {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -139,16 +129,29 @@
   font-size: .7rem;
 }
 
-/* Mobile Nav */
-.mobileNav {
+#navAuth {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: none;
+}
+
+#navBar {
   position: fixed;
-  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   top: 0;
   left: 0;
   right: 0;
+  /* Mobile Nav */
+  /* Desktop Nav */
 }
 
-#mobNavBar {
+#navBar .mobileNav #mobNavBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +164,7 @@
   background-color: #183f39;
 }
 
-#mobNavBar #titleBox {
+#navBar .mobileNav #mobNavBar #titleBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,7 +177,7 @@
           align-items: center;
 }
 
-#mobNavBar #mobNavRight {
+#navBar .mobileNav #mobNavBar #mobNavRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,13 +190,13 @@
   width: 25%;
 }
 
-#mobNavBar #mobNavRight a {
+#navBar .mobileNav #mobNavBar #mobNavRight a {
   color: white;
   padding: 15px 20px;
   font-size: 32px;
 }
 
-#mobNavBar #mobNavLeft {
+#navBar .mobileNav #mobNavBar #mobNavLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,18 +209,18 @@
   width: 25%;
 }
 
-#mobNavBar #mobNavLeft a {
+#navBar .mobileNav #mobNavBar #mobNavLeft a {
   color: white;
   padding: 15px 20px;
   font-size: 32px;
 }
 
-#xMark {
+#navBar .mobileNav #xMark {
   display: none;
   background-color: #12302c;
 }
 
-#mobNavDropdown {
+#navBar .mobileNav #mobNavDropdown {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -232,39 +235,30 @@
   background-color: #12302c;
 }
 
-#mobNavDropdown div {
+#navBar .mobileNav #mobNavDropdown div {
   padding: 18px 20px;
   border-bottom: 1px solid #ffffff32;
 }
 
-#mobNavDropdown a {
+#navBar .mobileNav #mobNavDropdown a {
   color: #f7f7f7;
   text-decoration: none;
   padding: 18px 20px;
   font-size: 32px;
 }
 
-/* Desktop Nav */
 @media only screen and (min-width: 1024px) {
-  .mobileOff {
+  #navBar .mobileNav {
     display: none !important;
   }
-  .desktopON {
+  #navBar .desktopNav {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
 }
 
-.desktopNav {
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.desktopNav .deskNavBar {
+#navBar .desktopNav {
   display: none;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -275,7 +269,7 @@
   background-color: #183f39;
 }
 
-.desktopNav .deskNavBar #titleBox {
+#navBar .desktopNav #titleBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +282,7 @@
           align-items: center;
 }
 
-.desktopNav .deskNavBar #deskNavRight {
+#navBar .desktopNav #deskNavRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,7 +295,7 @@
   width: 33.3333%;
 }
 
-.desktopNav .deskNavBar #deskNavRight a {
+#navBar .desktopNav #deskNavRight a {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
@@ -309,11 +303,11 @@
   font-weight: 400;
 }
 
-.desktopNav .deskNavBar #deskNavRight a:hover {
+#navBar .desktopNav #deskNavRight a:hover {
   background-color: #12302c;
 }
 
-.desktopNav .deskNavBar #deskNavLeft {
+#navBar .desktopNav #deskNavLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +320,7 @@
   width: 33.3333%;
 }
 
-.desktopNav .deskNavBar #deskNavLeft a {
+#navBar .desktopNav #deskNavLeft a {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
@@ -334,7 +328,7 @@
   font-weight: 400;
 }
 
-.desktopNav .deskNavBar #deskNavLeft a:hover {
+#navBar .desktopNav #deskNavLeft a:hover {
   background-color: #12302c;
 }
 

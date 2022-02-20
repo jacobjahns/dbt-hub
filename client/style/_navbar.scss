@@ -1,140 +1,140 @@
 @import '_variables.scss';
 
-/* Mobile Nav */
 
-.mobileNav {
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  #mobNavBar {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    background-color: #183f39;
-  
-    #titleBox {
+#navAuth {
+  align-self: flex-start;
+  display: none;
+}
+
+#navBar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* Mobile Nav */
+  .mobileNav {
+    
+    #mobNavBar {
       display: flex;
-      width: auto;
-      justify-content: center;
-      align-items: center;
-    }
-    #mobNavRight {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 25%;
-       a {
-        color: white;
-        padding: 15px 20px;
-        font-size: 32px;
+      align-items: stretch;
+      justify-content: space-between;
+      background-color: #183f39;
+    
+      #titleBox {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      #mobNavRight {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 25%;
+        a {
+          color: white;
+          padding: 15px 20px;
+          font-size: 32px;
+          }
+      }
+      #mobNavLeft {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 25%;
+        a {
+          color: white;
+          padding: 15px 20px;
+          font-size: 32px;
         }
+      }
     }
-    #mobNavLeft {
-      display: flex;
-      justify-content: flex-start;
+    
+    #xMark {
+      display: none;
+      background-color: darken($BG-color, $amount: 4%);
+    }
+    
+    #mobNavDropdown {
+      display: none;
+      flex-direction: column;
       align-items: center;
-      width: 25%;
+      justify-content: stretch;
+      background-color: $BGdark-color;
+    
+      div {
+      padding: 18px 20px;
+      border-bottom: 1px solid #ffffff32;
+      }
+
       a {
-        color: white;
-        padding: 15px 20px;
-        font-size: 32px;
+      color: #f7f7f7;
+      text-decoration: none;
+      padding: 18px 20px;
+      font-size: 32px;
       }
     }
   }
-  
-  #xMark {
-    display: none;
-    background-color: darken($BG-color, $amount: 4%);
-  }
-  
-  #mobNavDropdown {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: stretch;
-    background-color: $BGdark-color;
-  
-    div {
-    padding: 18px 20px;
-    border-bottom: 1px solid #ffffff32;
+    
+    /* Desktop Nav */
+    @media only screen and (min-width: 1024px) {
+      .mobileNav {
+        display: none!important;
+      }
+      .desktopNav {
+        display: flex!important;
+      }
     }
-
-    a {
-    color: #f7f7f7;
-    text-decoration: none;
-    padding: 18px 20px;
-    font-size: 32px;
-    }
-  }
-  
-  /* Desktop Nav */
-  @media only screen and (min-width: 1024px) {
-    .mobileOff {
-      display: none!important;
-    }
-    .desktopON {
-      display: flex!important;
-    }
-  }
-  
-  .desktopNav {
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    right: 0;
-  
-  
-    .deskNavBar {
+    
+    .desktopNav {
       display: none;
       align-items: stretch;
       justify-content: space-between;
       background-color: $BG-color;
-  
-      #titleBox {
-        display: flex;
-        width: 33.3333%;
-        justify-content: center;
-        align-items: center;
-      }
-      #deskNavRight {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 33.3333%;
-        a {
-          color: white;
-          padding: 14px 20px;
-          text-decoration: none;
-          font-size: 32px;
-          font-weight: 400;
-          &:hover {
-            background-color: $BGdark-color;         
+    
+        #titleBox {
+          display: flex;
+          width: 33.3333%;
+          justify-content: center;
+          align-items: center;
+        }
+        #deskNavRight {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          width: 33.3333%;
+          a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 400;
+            &:hover {
+              background-color: $BGdark-color;         
+            }
           }
         }
-      }
-      #deskNavLeft {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 33.3333%;
-        a {
-          color: white;
-          padding: 14px 20px;
-          text-decoration: none;
-          font-size: 32px;
-          font-weight: 400;
-          &:hover {
-            background-color: #12302c;         
+        #deskNavLeft {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 33.3333%;
+          a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 400;
+            &:hover {
+              background-color: #12302c;         
+            }
           }
         }
       }
     }
-  }
   
   /* General */
   

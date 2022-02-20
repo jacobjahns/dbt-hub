@@ -11,36 +11,32 @@ function navMenuOpen()
         document.getElementById("mobNavDropdown").style.display = "flex";
         document.getElementById("bars").style.display = "none";
         document.getElementById("xMark").style.display = "inline";
-        document.getElementById("mobNavAuth").style.display = "none";
-        document.getElementById("userIcon").style.backgroundColor = "";
+        document.getElementById("navAuth").style.display = "none";
+        const list = document.getElementsByClassName("userIcon");
+        for (let elem of list) {
+            elem.style.backgroundColor = "";
+        }
     }
 }
-function mobAuthMenu() 
+function toggleAuthMenu() 
 {
-    if (document.getElementById("mobNavAuth").style.display === "block")
+    if (document.getElementById("navAuth").style.display === "block")
     {
-        document.getElementById("mobNavAuth").style.display = "none";
-        document.getElementById("userIcon").style.backgroundColor = "";
+        document.getElementById("navAuth").style.display = "none";
+        const list = document.getElementsByClassName("userIcon");
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.backgroundColor = "";
+        }
     }
     else 
     {
-        document.getElementById("mobNavAuth").style.display = "block";
-        document.getElementById("userIcon").style.backgroundColor = "#12302c";
+        document.getElementById("navAuth").style.display = "block";
+        const list = document.getElementsByClassName("userIcon");
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.backgroundColor = "#12302c";
+        }
         document.getElementById("mobNavDropdown").style.display = "none";
         document.getElementById("bars").style.display = "inline";
         document.getElementById("xMark").style.display = "none";
-    }
-}
-function deskAuthMenu() 
-{
-    if (document.getElementById("deskNavAuth").style.display === "block")
-    {
-        document.getElementById("deskNavAuth").style.display = "none";
-        document.getElementById("deskUserIcon").style.backgroundColor = "";
-    }
-    else 
-    {
-        document.getElementById("deskNavAuth").style.display = "block";
-        document.getElementById("deskUserIcon").style.backgroundColor = "#12302c";
     }
 }

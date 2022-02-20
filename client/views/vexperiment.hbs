@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/6ea270afe6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/vex.css">
     <title>Verhaltensexperimente</title>
   </head>
 
@@ -53,6 +54,7 @@
         const searchParams = new URLSearchParams(window.location.search)
         if(searchParams.get('neues-vex')) searchParams.delete('neues-vex')
         else searchParams.set('neues-vex', '1')
+        window.history.replaceState({}, '', `${location.pathname}?${searchParams}`)
       }
     </script>
 

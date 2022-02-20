@@ -1,57 +1,54 @@
 <!-- Mobile Navigation Menu -->
-<section class="mobileNav mobileOff">
+<section id="navBar">
+    <nav class="mobileNav">
 
-    <nav id="mobNavBar">
-        <div id="mobNavLeft">
-            <a href="javascript:void(0);" id="userIcon" onclick="mobAuthMenu()">
-                <i class="fa-solid fa-user"></i>
-            </a>
+        <nav id="mobNavBar">
+            <div id="mobNavLeft">
+                <a href="javascript:void(0);" class="userIcon" onclick="toggleAuthMenu()">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+            <div id="titleBox">
+                <a href="/" id="title">DBT-Hub</a>
+            </div>
+            <div id="mobNavRight">
+                <a href="javascript:void(0);" id="bars" onclick="navMenuOpen()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <a href="javascript:void(0);" id="xMark" onclick="navMenuOpen()">
+                    <i class="fa-solid fa-xmark fa-lg"></i>
+                </a>
+            </div>
+        </nav>
+
+        <nav id="mobNavDropdown">
+            <div><a href="/vexperiment">VExperiment</a></div>
+            <div><a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a></div>
+        </nav>
+    </nav>
+
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="desktopNav">
+        <div id="deskNavLeft">
+            <a href="javascript:void(0);" class="userIcon" onclick="toggleAuthMenu()">
+                <i class="fa-solid fa-user"></i></a>
+            <a href="/vexperiment">VExperiment</a>
         </div>
-        <div id="titleBox">
-            <a href="/" id="title">DBT-Hub</a>
+            <div id="titleBox">
+            <a id="title" href="/">DBT-Hub</a>
         </div>
-        <div id="mobNavRight">
-            <a href="javascript:void(0);" id="bars" onclick="navMenuOpen()">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-            <a href="javascript:void(0);" id="xMark" onclick="navMenuOpen()">
-                <i class="fa-solid fa-xmark fa-lg"></i>
-            </a>
+        <div id="deskNavRight">
+            <a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a>
         </div>
     </nav>
 
-    <nav id="mobNavDropdown">
-        <div><a href="/vexperiment">VExperiment</a></div>
-        <div><a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a></div>
-    </nav>
 
-    <div id="mobNavAuth" class="auth">  
+    <div id="navAuth" style="display: none;">  
         {{> auth}}
     </div>
 
 </section>
-
-
-<!-- Desktop Navigation Menu -->
-<div class="desktopNav">
-<nav class="deskNavBar desktopON">
-    <div id="deskNavLeft">
-        <a href="javascript:void(0);" id="deskUserIcon" onclick="deskAuthMenu()">
-            <i class="fa-solid fa-user"></i></a>
-        <a href="/vexperiment">VExperiment</a>
-    </div>
-        <div id="titleBox">
-        <a id="title" href="/">DBT-Hub</a>
-    </div>
-    <div id="deskNavRight">
-        <a href="/gefuehl-aha" target="_parent">Gefühl-AHA</a>
-    </div>
-</nav>
-    <div id="deskNavAuth" class="auth">  
-        {{> auth}}
-    </div>
-</div>
-
 
 <!-- Top Navigation Gap -->
 <div style="padding: 40px;"></div>

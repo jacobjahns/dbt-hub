@@ -59,9 +59,9 @@
 
 <script>
   const toggleAuthMethod = () => {
-    const login = document.getElementById('login');
-    login.style.display = login.style.display == 'none' ? 'flex' : 'none';
-    const reg = document.getElementById('register');
-    reg.style.display = reg.style.display == 'none' ? 'flex' : 'none';
+    const auth = document.getElementsByClassName('auth');
+    for(let elem of auth) {
+      elem.style.display = elem.style.display == 'none' ? 'flex' : 'none';
+    }
   }
 </script>

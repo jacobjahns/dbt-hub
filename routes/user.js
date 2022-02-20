@@ -33,8 +33,9 @@ router.get('/register', (req, res) => {
 // @access  Public
 router.post('/register', (req, res) => {
 
-    const {name, email, password, stay} = req.body
+    const {name, email, password} = req.body
     if(!password || !email) res.status(400).json({ errMsg: 'Bitte die mit (*) markierten Felder ausfüllen.' })
+    let {stay} = req.body
     if(!stay) stay = false
 
     User.findOne({ email })
@@ -57,7 +58,9 @@ router.post('/register', (req, res) => {
                 .save()
                 .then(user => {
                     const token = jwt.sign({ user: user._id }, process.env.JWT_SECRET)
-                    res.cookie('jwt', token, { httpOnly: true, maxAge: stay ? 2592000000 : 0 })
+                    const cookieOptions = { httpOnly: true }
+                    if(stay) cookieOptions.maxAge = 2592000000
+                    res.cookie('jwt', token, cookieOptions)
 
                     return res.status(304).redirect('/')
                 })
@@ -98,7 +101,9 @@ router.post('/login', (req, res) => {
                 if(!same) return res.status(400).json({ errMsg: 'Email oder Passwort falsch.' })
 
                 const token = jwt.sign({ user: user._id }, process.env.JWT_SECRET)
-                res.cookie('jwt', token, { httpOnly: true, maxAge: stay ? 2592000000 : 0 })
+                const cookieOptions = { httpOnly: true }
+                if(stay) cookieOptions.maxAge = 2592000000
+                res.cookie('jwt', token, cookieOptions)
 
                 return res.status(304).redirect('/')
             })
