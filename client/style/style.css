@@ -147,6 +147,10 @@
   top: 0;
   left: 0;
   right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   /* Mobile Nav */
   /* Desktop Nav */
 }
@@ -356,12 +360,20 @@
       -ms-flex-pack: stretch;
           justify-content: stretch;
   background-color: #183f39;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .footer .fooLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -403,6 +415,104 @@
   font-size: 20px;
 }
 
+/* Gefühl-Table */
+.linkClassic {
+  padding: 5px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#gefuehlTab {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 80px;
+      grid-template-columns: auto 80px;
+  grid-auto-rows: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#gefuehlTab div.gefuehlBox {
+  background-color: #466b23;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+  border-bottom: 1px solid #3a591cd6;
+}
+
+#gefuehlTab div.gefuehlBox:hover {
+  background-color: #3e5f1f;
+}
+
+#gefuehlTab div.gefuehlBox div, #gefuehlTab div.gefuehlBox i {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+#gefuehlTab div.iconBox {
+  background-color: #ef692f;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #ca5928e6;
+}
+
+#gefuehlTab div.iconBox i {
+  color: white;
+}
+
+#gefuehlTab div.explBox {
+  background-color: #39581d;
+  display: none;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  border: 1px inset #466b23;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+}
+
+#gefuehlTab div.explBox div {
+  font-size: 1.5rem;
+  color: white;
+}
+
+#gefuehlTab div.explBox ul {
+  font-size: 1.1rem;
+  color: white;
+  margin: 1px 0 4px 20px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -437,7 +547,12 @@ input[type='text'], input[type='password'], input[type='email'] {
   border-radius: 0;
 }
 
-input[type='submit'] {
+input:focus {
+  outline: none;
+}
+
+input[type='submit'],
+button {
   -webkit-appearance: none;
   padding: 0.4rem 0.3rem;
   cursor: pointer;
@@ -449,27 +564,45 @@ input[type='submit'] {
   transition: all 0.05s;
 }
 
-input[type='submit']:active {
+input[type='submit']:active,
+button:active {
   color: #ef692f;
   background-color: #fff;
   border: 2px solid #ef692f;
 }
 
-input[type='submit']:disabled {
+input[type='submit']:disabled,
+button:disabled {
   cursor: default;
   color: #8f8f8f;
   background-color: #fff;
   border-color: #8f8f8f;
 }
 
-input:focus {
-  outline: none;
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: calc(100vh - 7rem);
+  margin: 5rem 0 2rem;
 }
 
 h1 {
   text-align: center;
   color: #183f39;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
 hr {
@@ -478,27 +611,4 @@ hr {
   border-style: solid;
   margin: 24px auto 30px auto;
 }
-
-/* Gefühl-AHA Tabelle */
-#gefuehlTab {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-}
-
-/*   a.icon {
-    display: block;
-    position: relative;
-    width: auto;
-    height: auto;
-    margin-right: 5px;
-
-    transition: all .2s;
-
-    &:hover {
-      margin-right: 0;
-    }
-  }
-} */
 /*# sourceMappingURL=style.css.map */

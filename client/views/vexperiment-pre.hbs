@@ -15,8 +15,8 @@
     <main class="content vex-pre">
       {{#with vex}}
       <section class="vex-header">
+        <h2 class="vex-date">{{dateConversion date}}</h2>
         <h1 class="vex-headline">{{name}}</h1>
-        <h2 class="vex-date">{{date}}</h2>
       </section>
       <section class="vex-body">
         <form action="/v/new/{{_id}}/pre" method="post" class="vex-form vex-pre-form">
@@ -40,7 +40,7 @@
             <label for="experiment">Experiment</label>
             <input type="text" name="experiment" class="vex-input" value="{{experiment}}">
           </div>
-          <div class="vex-form-field">
+          <div class="vex-form-field btn-bottom-right">
             <input type="submit" value=">">
           </div>
         </form>

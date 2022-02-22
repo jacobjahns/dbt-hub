@@ -29,6 +29,8 @@ fs.readdirSync(path.join(__dirname, '/client/views/partials/')).forEach(partial 
     let templateNav = fs.readFileSync(path.join(__dirname, '/client/views/partials/', partial), 'utf-8')
     handlebars.registerPartial(partial.slice(0, -4), templateNav)
 })
+// Handlebars Helpers
+handlebars.registerHelper('dateConversion', require('./client/views/helpers/dateConversion'))
 
 
 // Allow static paths in client folder

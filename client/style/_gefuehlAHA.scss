@@ -1,0 +1,71 @@
+@import '_variables.scss';
+
+/* Gefühl-Table */
+
+.linkClassic {
+    padding: 5px;
+    align-self: flex-start;
+  }
+
+#gefuehlTab {
+    display: grid;
+    grid-template-columns: auto 80px;
+    grid-auto-rows: auto;
+    user-select: none;
+
+    div {
+        &.gefuehlBox {
+            background-color: #466b23;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 0;
+            border-bottom: 1px solid #3a591cd6;
+            
+            &:hover {
+                background-color: darken(#466b23, 3%);
+            }
+
+            div,i {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+                margin: 0 10px;
+            }
+        }
+        &.iconBox {
+            background-color: #ef692f;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-bottom: 1px solid #ca5928e6;
+
+            i {
+                color: white;
+            }
+        }
+        &.explBox {
+            background-color: darken(#466b23, 5%);
+            display: none; //Grid
+            grid-column: 1 / span 2;
+            border: 1px inset #466b23;
+            grid-template-columns: auto;
+            grid-template-rows: max-content;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 5px 10px;
+            div {
+                font-size: 1.5rem;
+                color: white;
+            }
+            ul {
+                font-size: 1.1rem;
+                color: white;
+                margin: 1px 0 4px 20px;
+            }
+        }
+    }
+}

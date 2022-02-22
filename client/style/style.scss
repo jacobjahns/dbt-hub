@@ -2,6 +2,7 @@
 @import '_auth.scss';
 @import '_navbar.scss';
 @import '_footer.scss';
+@import '_gefuehlAHA.scss';
 
 * {
   box-sizing: border-box;
@@ -34,38 +35,53 @@ input {
     border-radius: 0;
   }
 
-  &[type='submit'] {
-    -webkit-appearance: none;
-    padding: 0.4rem 0.3rem;
-
-    cursor: pointer;
-    color: #fff;
-    background-color: $primary-color;
-    border: 2px solid $primary-color;
-    font-size: 1.2rem;
-    transition: all 0.05s;
-
-    &:active {
-      color: $primary-color;
-      background-color: #fff;
-      border: 2px solid $primary-color;
-    }
-    &:disabled {
-      cursor: default;
-      color: opacify(grayscale($primary-color), 0.2);
-      background-color: #fff;
-      border-color: grayscale($primary-color);
-    }
-  }
   &:focus {
     outline: none;
   }
 }
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  padding: 0.4rem 0.3rem;
+
+  cursor: pointer;
+  color: #fff;
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+  font-size: 1.2rem;
+  transition: all 0.05s;
+
+  &:active {
+    color: $primary-color;
+    background-color: #fff;
+    border: 2px solid $primary-color;
+  }
+  &:disabled {
+    cursor: default;
+    color: opacify(grayscale($primary-color), 0.2);
+    background-color: #fff;
+    border-color: grayscale($primary-color);
+  }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-height: calc(100vh - 7rem);
+  margin: 5rem 0 2rem;
+}
 
 h1{
   text-align: center;
-  color: #183f39 ;
-  font-weight: 600;
+  color: $BG-color;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
 hr{
@@ -74,27 +90,5 @@ hr{
   border-style: solid;
   margin: 24px auto 30px auto;
 }
-
-/* Gefühl-AHA Tabelle */
-#gefuehlTab {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-/*   a.icon {
-    display: block;
-    position: relative;
-    width: auto;
-    height: auto;
-    margin-right: 5px;
-
-    transition: all .2s;
-
-    &:hover {
-      margin-right: 0;
-    }
-  }
-} */
-
 
 /*# sourceMappingURL=style.css.map */

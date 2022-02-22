@@ -1,1 +1,258 @@
-/* No CSS *//*# sourceMappingURL=vex.css.map */
+main.content {
+  margin: 5rem 2rem 2rem;
+}
+
+main.content section {
+  padding: 1rem 0 .25rem;
+}
+
+main.content section.vex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+main.content section.vex-header > * {
+  padding: 4px 0;
+  text-align: center;
+}
+
+main.content section.vex-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.content section.vex-body ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  border-collapse: collapse;
+}
+
+main.content section.vex-body ul.vex-all-list li.item,
+main.content section.vex-body ul.vex-all-list li.vex {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2rem;
+  -ms-grid-columns: 25% auto 25%;
+      grid-template: 2rem / 25% auto 25%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #333;
+  border-collapse: collapse;
+}
+
+main.content section.vex-body ul.vex-all-list li.item:last-child,
+main.content section.vex-body ul.vex-all-list li.vex:last-child {
+  border-bottom: none;
+}
+
+main.content section.vex-body ul.vex-all-list li.item div, main.content section.vex-body ul.vex-all-list li.item a,
+main.content section.vex-body ul.vex-all-list li.vex div,
+main.content section.vex-body ul.vex-all-list li.vex a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main.content section.vex-body ul.vex-all-list li.item div.vex-name, main.content section.vex-body ul.vex-all-list li.item a.vex-name,
+main.content section.vex-body ul.vex-all-list li.vex div.vex-name,
+main.content section.vex-body ul.vex-all-list li.vex a.vex-name {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  font-weight: bold;
+}
+
+main.content section.vex-body ul.vex-all-list li.item div.vex-situation, main.content section.vex-body ul.vex-all-list li.item a.vex-situation,
+main.content section.vex-body ul.vex-all-list li.vex div.vex-situation,
+main.content section.vex-body ul.vex-all-list li.vex a.vex-situation {
+  color: #363636;
+}
+
+main.content section.vex-body ul.vex-all-list li.item div.vex-date, main.content section.vex-body ul.vex-all-list li.item a.vex-date,
+main.content section.vex-body ul.vex-all-list li.vex div.vex-date,
+main.content section.vex-body ul.vex-all-list li.vex a.vex-date {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+main.content section.vex-body form.vex-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main.content section.vex-body form.vex-form .vex-form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: .5rem 0;
+}
+
+main.content section.vex-body form.vex-form .vex-form-field input.vex-input {
+  width: 100%;
+}
+
+main.content section.vex-new-button button {
+  padding: 0 0 4px 0;
+  font-size: 1.8rem;
+}
+
+.btn-bottom-right {
+  position: fixed;
+  width: auto;
+  bottom: 3vh;
+  right: 3vh;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-bottom-right button, .btn-bottom-right input {
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 2px 5px 1px #363636;
+          box-shadow: 1px 2px 5px 1px #363636;
+}
+
+section.vex-new {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(18, 48, 44, 0.75);
+}
+
+section.vex-new .vex-new-modal {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+section.vex-new .vex-new-modal h2 {
+  font-size: 1.1rem;
+}
+
+section.vex-new .vex-new-modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.vex-new .vex-new-modal form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: .5rem;
+}
+
+section.vex-new .vex-new-modal form div label {
+  padding-right: 6px;
+}
+
+section.vex-new .vex-new-modal > * {
+  padding: .5rem 0 0 0;
+}
+/*# sourceMappingURL=vex.css.map */

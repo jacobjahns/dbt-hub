@@ -1,0 +1,176 @@
+@import '_variables.scss';
+
+main.content {
+  margin: 5rem 2rem 2rem;
+
+  section {
+    padding: 1rem 0 .25rem;
+  }
+
+  section.vex-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: $border-style;
+
+    > * {
+      padding: 4px 0;
+      text-align: center;
+    }
+  }
+
+  section.vex-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    ul {
+      width: 100%;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      
+      list-style: none;
+      border-collapse: collapse;
+      
+      &.vex-all-list li.item,
+      &.vex-all-list li.vex {
+        width: 100%;
+        
+        display: grid;
+        grid-template: 2rem / 25% auto 25%;
+        justify-items: center;
+        align-items: center;
+        
+        border-bottom: $border-style;
+        border-collapse: collapse;
+        &:last-child { border-bottom: none; }
+
+        div, a {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &.vex-name {
+            justify-self: start;
+
+            font-weight: bold;
+          }
+
+          &.vex-situation {
+            color: $label-color;
+          }
+          
+          &.vex-date {
+            justify-self: end;
+          }
+        }
+      }
+    }
+
+    form.vex-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .vex-form-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: baseline;
+
+        // width: 70vw;
+        padding: .5rem 0;
+
+        input.vex-input {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  section.vex-new-button button {
+    padding: 0 0 4px 0;
+
+    font-size: 1.8rem;
+  }
+}
+
+.btn-bottom-right {
+  position: fixed;
+  width: auto;
+  bottom: 3vh;
+  right: 3vh;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  button, input {
+    width: 50px;
+    height: 50px;
+    
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 1px 2px 5px 1px $label-color;
+  }
+}
+
+section.vex-new {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba($BGdark-color, 0.75);
+
+  .vex-new-modal {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-radius: 8px;
+    background-color: #fff;
+
+    h2 {
+      font-size: 1.1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: row;
+
+        padding: .5rem;
+
+        label {
+          padding-right: 6px;
+        }
+      }
+    }
+
+    > * {
+      padding: .5rem 0 0 0;
+    }
+  }
+}

@@ -6,9 +6,11 @@
     align-items: center;
     justify-content: stretch;
     background-color: $BG-color;
+    user-select: none;
 
     .fooLinks{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: stretch;
         

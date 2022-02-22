@@ -40,3 +40,22 @@ function toggleAuthMenu()
         document.getElementById("xMark").style.display = "none";
     }
 }
+
+function textBoxOpen(num)
+{
+    const list = document.getElementsByClassName("explBox");
+    console.log(list[num].style.display)
+    if (list[num].style.display == "")
+    {
+        for (const elem of list) {
+            if (elem != list[num]) {
+                elem.style.display = "";
+            } else
+                elem.style.display = "grid";
+        }
+    }
+    else 
+    {
+        list[num].style.display = ""
+    }
+}

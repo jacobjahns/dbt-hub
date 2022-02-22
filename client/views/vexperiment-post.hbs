@@ -15,8 +15,8 @@
     <main class="content vex-pre">
       {{#with vex}}
       <section class="vex-header">
+        <h2 class="vex-date">{{dateConversion date}}</h2>
         <h1 class="vex-headline">{{name}}</h1>
-        <h2 class="vex-date">{{date}}</h2>
       </section>
       <section class="vex-body">
         <form action="/v/new/{{_id}}/post" method="post" class="vex-form vex-post-form">
@@ -28,7 +28,7 @@
             <label for="lernerfahrungen">Lernerfahrungen</label>
             <input type="text" name="lernerfahrungen" class="vex-input" value="{{lernerfahrungen}}">
           </div>
-          <div class="vex-form-field">
+          <div class="vex-form-field btn-bottom-right">
             <input type="submit" value="Speichern">
           </div>
         </form>
