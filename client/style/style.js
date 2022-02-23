@@ -1,3 +1,5 @@
+const { isValidObjectId } = require("mongoose");
+
 function navMenuOpen() 
 {
     if (document.getElementById("mobNavDropdown").style.display === "flex")
@@ -44,7 +46,9 @@ function toggleAuthMenu()
 function textBoxOpen(num)
 {
     const list = document.getElementsByClassName("explBox");
-    console.log(list[num].style.display)
+    const coll = document.getElementsByClassName("iconExpl");
+    num2 = num*2;
+
     if (list[num].style.display == "")
     {
         for (const elem of list) {
@@ -53,9 +57,21 @@ function textBoxOpen(num)
             } else
                 elem.style.display = "grid";
         }
+        //reset all arrows first
+        for (var i = 0; i < coll.length; i++) {
+            if ((i % 2) == 1) //all odd numbered objects
+                coll[i].style.display = "none";
+            else
+                coll[i].style.display = "inline-block";
+        }
+        //then set selected arrows
+        coll[num2].style.display = "none";
+        coll[num2+1].style.display = "inline-block";
     }
-    else 
+    else
     {
-        list[num].style.display = ""
+        list[num].style.display = "";
+        coll[num2].style.display = "inline-block";
+        coll[num2+1].style.display = "none";
     }
 }

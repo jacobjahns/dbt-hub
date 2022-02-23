@@ -482,7 +482,7 @@
 }
 
 #gefuehlTab div.explBox {
-  background-color: #39581d;
+  background-color: #37541b;
   display: none;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -504,12 +504,12 @@
 
 #gefuehlTab div.explBox div {
   font-size: 1.5rem;
-  color: white;
+  color: #eee;
 }
 
 #gefuehlTab div.explBox ul {
   font-size: 1.1rem;
-  color: white;
+  color: #eee;
   margin: 1px 0 4px 20px;
 }
 

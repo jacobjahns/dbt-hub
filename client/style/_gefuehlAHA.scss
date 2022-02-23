@@ -48,7 +48,7 @@
             }
         }
         &.explBox {
-            background-color: darken(#466b23, 5%);
+            background-color: darken(#466b23, 6%);
             display: none; //Grid
             grid-column: 1 / span 2;
             border: 1px inset #466b23;
@@ -59,11 +59,11 @@
             padding: 5px 10px;
             div {
                 font-size: 1.5rem;
-                color: white;
+                color: #eee;
             }
             ul {
                 font-size: 1.1rem;
-                color: white;
+                color: #eee;
                 margin: 1px 0 4px 20px;
             }
         }
