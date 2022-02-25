@@ -55,7 +55,7 @@ function textBoxOpen(num)
             if (elem != list[num]) {
                 elem.style.display = "";
             } else
-                elem.style.display = "grid";
+                elem.style.display = "flex";
         }
         //reset all arrows first
         for (var i = 0; i < coll.length; i++) {
@@ -74,4 +74,21 @@ function textBoxOpen(num)
         coll[num2].style.display = "inline-block";
         coll[num2+1].style.display = "none";
     }
+}
+
+function popupOpen(num)
+{
+    if (num == '9000') {
+        document.getElementById("blockScreen").style.display = "none";
+        document.body.style.overflow = "scroll";
+        const list = document.getElementsByClassName("popup");
+        for (const elem of list) elem.style.display = "none";
+        return
+    }
+
+    document.body.style.overflow = "hidden";
+    document.getElementById("blockScreen").style.display = "block";
+    const list = document.getElementsByClassName("popup");
+    list[num].style.display = "grid";
+
 }

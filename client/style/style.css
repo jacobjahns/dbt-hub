@@ -484,33 +484,93 @@
 #gefuehlTab div.explBox {
   background-color: #37541b;
   display: none;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
   border: 1px inset #466b23;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: max-content;
-      grid-template-rows: -webkit-max-content;
-      grid-template-rows: max-content;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
   padding: 5px 10px;
 }
 
-#gefuehlTab div.explBox div {
+#gefuehlTab div.explBox div div {
   font-size: 1.5rem;
   color: #eee;
 }
 
-#gefuehlTab div.explBox ul {
+#gefuehlTab div.explBox div ul {
   font-size: 1.1rem;
   color: #eee;
   margin: 1px 0 4px 20px;
+}
+
+#blockScreen {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #24242499;
+  z-index: 10001;
+}
+
+.popupContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.popupContainer .popup {
+  display: none;
+  position: fixed;
+  background-color: white;
+  text-align: center;
+  z-index: 10002;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 20px;
+}
+
+.popupContainer .popup .yesNo {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  background-color: white;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 100%;
+}
+
+@media (min-width: 1024px) {
+  .explBox {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
 }
 
 * {

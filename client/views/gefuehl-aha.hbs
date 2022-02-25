@@ -21,25 +21,31 @@
             <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
             <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
         </div>
-        <div class="iconBox">
+        <div class="iconBox" onclick="popupOpen(0)">
             <i class="fa-solid fa-arrow-right-long"></i>
         </div>
         <div class="explBox">
-            <div>Wahrnehmung</div>
-            <ul>
-                <li>Umgebung wirkt fahl, leer</li>
-                <li>Gefühl von Verzweiflung, Zerissenheit</li>
-            </ul>
-            <div>Handlungsdrang</div>
-            <ul>
-                <li>Rückzug aus Verantwortung, Beziehungen</li>
-                <li>Signal nach Trost and die Umgebung</li>
-            </ul>
-            <div>Körperreaktion</div>
-            <ul>
-                <li>Weinen, Klagen, Müdigkeit</li>
-                <li>Atemnot, Schmerz in der Brust</li>
-            </ul>
+            <div>
+                <div>Wahrnehmung</div>
+                <ul>
+                    <li>Umgebung wirkt fahl, leer</li>
+                    <li>Gefühl von Verzweiflung, Zerissenheit</li>
+                </ul>
+            </div>
+            <div>
+                <div>Handlungsdrang</div>
+                <ul>
+                    <li>Rückzug aus Verantwortung, Beziehungen</li>
+                    <li>Signal nach Trost and die Umgebung</li>
+                </ul>
+            </div>
+            <div>
+                <div>Körperreaktion</div>
+                <ul>
+                    <li>Weinen, Klagen, Müdigkeit</li>
+                    <li>Atemnot, Schmerz in der Brust</li>
+                </ul>
+            </div>
         </div>
         <div class="gefuehlBox" onclick="textBoxOpen(1)">
             <div>Wut</div>
@@ -64,7 +70,16 @@
             <div>test</div>
         </div>
     </div>
-    
+
+    <div id="blockScreen" onclick="popupOpen(9000)"></div>
+<div class="popupContainer">
+    <div class="popup">
+        <div>Kann ich noch sinnvoll Handeln?</div>
+        <div>(Intensität unter 70%)</div>
+        <button class="yesNo"><i class="fa-solid fa-check"></i></button>
+        <button class="yesNo"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</div>
 </main>
 
 {{> footer}}
