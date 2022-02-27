@@ -72,7 +72,7 @@
 }
 
 #popupContainer {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 10002;
     left: 0;
@@ -90,9 +90,6 @@
         z-index: 10002;
         user-select: none;
         padding: 20px;
-
-        div {
-        }
 
         .yesNo {
             height: 50px;

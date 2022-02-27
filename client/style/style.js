@@ -78,12 +78,8 @@ function textBoxOpen(num)
 window.onclick = function(event) {
     if (event.target == document.getElementById("popupContainer")) {
         document.getElementById("popupContainer").style.display = "none";
+        document.body.style.overflow = "auto";
     }
-}
-
-function closeContainer()
-{
-    document.getElementById("popupContainer").style.display = "none";
 }
 
 function popupOpen(num)
@@ -94,7 +90,6 @@ function popupOpen(num)
     list[num].style.display = "grid";
 
 }
-
 
 // VEx Textboxes
 const textboxSize = { cols: 20, rows: 1 };
