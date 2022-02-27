@@ -41,34 +41,54 @@ main.content {
       &.vex-all-list li.item,
       &.vex-all-list li.vex {
         width: 100%;
+        margin: .5rem 0;
+        padding: 10px;
         
-        display: grid;
-        grid-template: 2rem / auto 12ch;
-        justify-items: center;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        background-color: lighten($primary-color, 40%);
+        border: $border-style;
+        border-radius: 5px;
+        box-shadow: 1px 2px 5px 1px lighten($label-color, 20%);
         
-        border-bottom: $border-style;
-        border-collapse: collapse;
-        &:last-child { border-bottom: none; }
+        .vex-card-header {
+          // padding: 4px;#
 
-        div, a {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-
-          &.vex-name {
-            justify-self: start;
-
-            font-weight: bold;
-          }
-
-          &.vex-situation {
-            color: $label-color;
-          }
+          display: grid;
+          grid-template: 2rem / auto 12ch;
+          justify-items: center;
+          align-items: center;
           
-          &.vex-date {
-            justify-self: end;
+          border-bottom: $border-style;
+
+          div, a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+  
+            &.vex-name {
+              justify-self: start;
+  
+              font-weight: bold;
+              font-size: 1.2rem;
+            }
+  
+            &.vex-situation {
+              color: $label-color;
+            }
+            
+            &.vex-date {
+              justify-self: end;
+
+              font-size: 1.1rem;
+            }
           }
+        }
+
+        .vex-situation {
+          padding: 5px 0 0 0;
         }
       }
     }

@@ -98,7 +98,16 @@ const setTextboxSize = () => {
     for(let i = 0; i < tb.length; i++) {
         tb[i].setAttribute('cols', textboxSize.cols);
         tb[i].setAttribute('rows', tb[i].innerHTML.split('•').length || Math.ceil(tb[i].innerHTML.length % textboxSize.cols));
-        if(tb[i].innerHTML == '') tb[i].innerHTML = ' • ';
+        if(tb[i].innerHTML == '') tb[i].innerHTML = '• ';
+        let parts = tb[i].innerHTML.split(/(?=[•])|(?<=[•])/g);
+        for(let j = 0; j < parts.length; j++) {
+            try {
+                if(parts[j] != '\n•' && parts[j] != '•') parts[j] = ' ' + parts[j].trim();
+                if(parts[j] == '•' && j > 0 && parts.indexOf('\n') == -1) parts[j] = '\n' + parts[j];
+            } catch {}
+        }
+        tb[i].innerHTML = parts.join('');
+
     }
 }
 
@@ -106,7 +115,7 @@ const addItem = elem => {
     elem.setAttribute('rows', '' + (parseInt(elem.getAttribute('rows')) + 1))
     console.log(elem)
 
-    elem.value += '\n • '
+    elem.value += '\n• '
     return true
 }
 

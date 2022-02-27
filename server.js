@@ -37,6 +37,7 @@ fs.readdirSync(path.join(__dirname, '/client/views/partials/')).forEach(partial 
 })
 // Handlebars Helpers
 handlebars.registerHelper('dateConversion', require('./client/views/helpers/dateConversion'))
+handlebars.registerHelper('splitVExItems', require('./client/views/helpers/splitVExItems'))
 
 
 // Allow static paths in client folder

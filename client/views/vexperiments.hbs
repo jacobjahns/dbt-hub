@@ -24,8 +24,11 @@
           {{/if}}
           {{#each vexperiments}}
           <li class="vex" id="{{this._id}}">
-            <a href="/v/{{this._id}}" class="vex-name">{{this.name}}</a>
-            <div class="vex-date">{{dateConversion this.date}}</div>
+            <div class="vex-card-header">
+              <a href="/v/{{this._id}}" class="vex-name">{{this.name}}</a>
+              <div class="vex-date">{{dateConversion this.date}}</div>
+            </div>
+            <p class="vex-situation">{{{splitVExItems this.situation}}}</p>
           </li>
           {{/each}}
         </ul>

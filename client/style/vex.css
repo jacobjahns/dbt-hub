@@ -66,6 +66,27 @@ main.content section.vex-body ul {
 main.content section.vex-body ul.vex-all-list li.item,
 main.content section.vex-body ul.vex-all-list li.vex {
   width: 100%;
+  margin: .5rem 0;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #fef2ec;
+  border: 1px solid #b89890;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 2px 5px 1px dimgray;
+          box-shadow: 1px 2px 5px 1px dimgray;
+}
+
+main.content section.vex-body ul.vex-all-list li.item .vex-card-header,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 2rem;
@@ -76,41 +97,42 @@ main.content section.vex-body ul.vex-all-list li.vex {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #b89890;
-  border-collapse: collapse;
 }
 
-main.content section.vex-body ul.vex-all-list li.item:last-child,
-main.content section.vex-body ul.vex-all-list li.vex:last-child {
-  border-bottom: none;
-}
-
-main.content section.vex-body ul.vex-all-list li.item div, main.content section.vex-body ul.vex-all-list li.item a,
-main.content section.vex-body ul.vex-all-list li.vex div,
-main.content section.vex-body ul.vex-all-list li.vex a {
+main.content section.vex-body ul.vex-all-list li.item .vex-card-header div, main.content section.vex-body ul.vex-all-list li.item .vex-card-header a,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header div,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-main.content section.vex-body ul.vex-all-list li.item div.vex-name, main.content section.vex-body ul.vex-all-list li.item a.vex-name,
-main.content section.vex-body ul.vex-all-list li.vex div.vex-name,
-main.content section.vex-body ul.vex-all-list li.vex a.vex-name {
+main.content section.vex-body ul.vex-all-list li.item .vex-card-header div.vex-name, main.content section.vex-body ul.vex-all-list li.item .vex-card-header a.vex-name,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header div.vex-name,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header a.vex-name {
   -ms-grid-column-align: start;
       justify-self: start;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
-main.content section.vex-body ul.vex-all-list li.item div.vex-situation, main.content section.vex-body ul.vex-all-list li.item a.vex-situation,
-main.content section.vex-body ul.vex-all-list li.vex div.vex-situation,
-main.content section.vex-body ul.vex-all-list li.vex a.vex-situation {
+main.content section.vex-body ul.vex-all-list li.item .vex-card-header div.vex-situation, main.content section.vex-body ul.vex-all-list li.item .vex-card-header a.vex-situation,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header div.vex-situation,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header a.vex-situation {
   color: #363636;
 }
 
-main.content section.vex-body ul.vex-all-list li.item div.vex-date, main.content section.vex-body ul.vex-all-list li.item a.vex-date,
-main.content section.vex-body ul.vex-all-list li.vex div.vex-date,
-main.content section.vex-body ul.vex-all-list li.vex a.vex-date {
+main.content section.vex-body ul.vex-all-list li.item .vex-card-header div.vex-date, main.content section.vex-body ul.vex-all-list li.item .vex-card-header a.vex-date,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header div.vex-date,
+main.content section.vex-body ul.vex-all-list li.vex .vex-card-header a.vex-date {
   -ms-grid-column-align: end;
       justify-self: end;
+  font-size: 1.1rem;
+}
+
+main.content section.vex-body ul.vex-all-list li.item .vex-situation,
+main.content section.vex-body ul.vex-all-list li.vex .vex-situation {
+  padding: 5px 0 0 0;
 }
 
 main.content section.vex-body form.vex-form {
