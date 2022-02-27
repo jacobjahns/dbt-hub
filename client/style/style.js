@@ -42,6 +42,7 @@ function toggleAuthMenu()
     }
 }
 
+//Open/Close Selected Explanation Boxes
 function textBoxOpen(num)
 {
     const list = document.getElementsByClassName("explBox");
@@ -75,6 +76,7 @@ function textBoxOpen(num)
     }
 }
 
+//Close Popup when Container is clicked
 window.onclick = function(event) {
     if (event.target == document.getElementById("popupContainer")) {
         document.getElementById("popupContainer").style.display = "none";
@@ -82,6 +84,7 @@ window.onclick = function(event) {
     }
 }
 
+//Display Popup-container and selected popups inside
 function popupOpen(num)
 {
     document.body.style.overflow = "hidden";
