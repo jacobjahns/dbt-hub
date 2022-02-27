@@ -69,8 +69,8 @@ main.content section.vex-body ul.vex-all-list li.vex {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 2rem;
-  -ms-grid-columns: 25% auto 25%;
-      grid-template: 2rem / 25% auto 25%;
+  -ms-grid-columns: auto 12ch;
+      grid-template: 2rem / auto 12ch;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -87,6 +87,7 @@ main.content section.vex-body ul.vex-all-list li.vex:last-child {
 main.content section.vex-body ul.vex-all-list li.item div, main.content section.vex-body ul.vex-all-list li.item a,
 main.content section.vex-body ul.vex-all-list li.vex div,
 main.content section.vex-body ul.vex-all-list li.vex a {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -113,6 +114,7 @@ main.content section.vex-body ul.vex-all-list li.vex a.vex-date {
 }
 
 main.content section.vex-body form.vex-form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,11 +145,55 @@ main.content section.vex-body form.vex-form .vex-form-field {
 
 main.content section.vex-body form.vex-form .vex-form-field input.vex-input {
   width: 100%;
+  font-size: 1.2rem;
+}
+
+main.content section.vex-body .vex-field {
+  width: 100%;
+  padding: .5rem 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.content section.vex-body .vex-field .vex-label {
+  padding-bottom: 5px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+main.content section.vex-body .vex-field .vex-field-show,
+main.content section.vex-body .vex-field .vex-field-edit {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: auto 2rem;
+      grid-template: auto / auto 2rem;
+}
+
+main.content section.vex-body .vex-field .vex-field-show button, main.content section.vex-body .vex-field .vex-field-show a,
+main.content section.vex-body .vex-field .vex-field-edit button,
+main.content section.vex-body .vex-field .vex-field-edit a {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main.content section.vex-body .vex-field .vex-field-show input,
+main.content section.vex-body .vex-field .vex-field-edit input {
+  font-size: 1rem;
 }
 
 main.content section.vex-new-button button {
-  padding: 0 0 4px 0;
-  font-size: 1.8rem;
+  padding: 0 0 0 0;
+  font-size: 1.9rem;
 }
 
 .btn-bottom-right {
@@ -170,11 +216,19 @@ main.content section.vex-new-button button {
 .btn-bottom-right button, .btn-bottom-right input {
   width: 50px;
   height: 50px;
+  vertical-align: middle;
   font-weight: bold;
   font-size: 1.5rem;
   border-radius: 50%;
   -webkit-box-shadow: 1px 2px 5px 1px #363636;
           box-shadow: 1px 2px 5px 1px #363636;
+}
+
+.vex-post-form .btn-bottom-right button, .vex-post-form .btn-bottom-right input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
 }
 
 section.vex-new {

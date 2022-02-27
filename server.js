@@ -7,6 +7,7 @@ const connectDB = require('./config/db')
 const cookieParser = require('cookie-parser')
 const handlebars = require('handlebars')
 const fs = require('fs')
+const session = require('express-session')
 
 dotenv.config({ path: './config/config.env' })
 
@@ -17,6 +18,11 @@ const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser())
+app.use(session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: true
+}))
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')

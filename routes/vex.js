@@ -47,6 +47,42 @@ router.get('/:id', auth, (req, res) => {
 
 })
 
+// @route   POST /v/:id || /verhaltensexperimente/:id
+// @desc    Edit vex data
+// @access  Private
+router.post('/:id', auth, (req, res) => {
+
+  const { id } = req.params
+  const {
+    situation,
+    personen,
+    sicherheitsverhalten,
+    befürchtungen,
+    experiment,
+    ergebnis,
+    lernerfahrungen,
+  } = req.body
+
+  const vexperiment = VExperiment
+    .findOne({ _id: id })
+    .then(vex => {
+      if(situation) vex.situation = situation
+      if(personen) vex.personen = personen
+      if(sicherheitsverhalten) vex.sicherheitsverhalten = sicherheitsverhalten
+      if(befürchtungen) vex.befürchtungen = befürchtungen
+      if(experiment) vex.experiment = experiment
+      if(ergebnis) vex.ergebnis = ergebnis
+      if(lernerfahrungen) vex.lernerfahrungen = lernerfahrungen
+
+      vex
+        .save()
+        .then(vex => res.status(200).redirect(`/v/${id}`))
+        .catch(err => console.log(err))
+    })
+    .catch(err => console.log(err))
+
+})
+
 
 // @route   GET /v || /verhaltensexperimente
 // @desc    Provide vexperiments page
@@ -61,6 +97,10 @@ router.get('/', auth, (req, res) => {
         .lean()
         .then(vexperiments => {
             errMsg = !vexperiments.length ? 'Keine Verhaltensexperimente gefunden.' : '';
+
+            console.log(vexperiments)
+            vexperiments.sort((a, b) => Date.parse(a.date) < Date.parse(b.date))
+            console.log(vexperiments)
 
             const templateStr = fs
                 .readFileSync(path.join(__dirname, '../client/views/vexperiments.hbs'))

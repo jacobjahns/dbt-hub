@@ -25,7 +25,6 @@
           {{#each vexperiments}}
           <li class="vex" id="{{this._id}}">
             <a href="/v/{{this._id}}" class="vex-name">{{this.name}}</a>
-            <div class="vex-situation">{{this.situation}}</div>
             <div class="vex-date">{{dateConversion this.date}}</div>
           </li>
           {{/each}}
@@ -33,7 +32,9 @@
       </section>
       
       <section class="vex-new-button btn-bottom-right">
-        <button onclick="toggleVexCreation()">+</button>
+        <button onclick="toggleVexCreation()">
+          <i class="fa-solid fa-plus"></i>
+        </button>
       </section>
     </main>
 

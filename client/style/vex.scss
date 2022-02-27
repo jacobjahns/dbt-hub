@@ -43,7 +43,7 @@ main.content {
         width: 100%;
         
         display: grid;
-        grid-template: 2rem / 25% auto 25%;
+        grid-template: 2rem / auto 12ch;
         justify-items: center;
         align-items: center;
         
@@ -52,6 +52,7 @@ main.content {
         &:last-child { border-bottom: none; }
 
         div, a {
+          overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
 
@@ -72,7 +73,10 @@ main.content {
       }
     }
 
+    // Vex content editing view
     form.vex-form {
+      width: 100%;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -88,18 +92,53 @@ main.content {
 
         input.vex-input {
           width: 100%;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    // Vex content view
+    .vex-field {
+      width: 100%;
+      padding: .5rem 5px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .vex-label {
+        padding-bottom: 5px;
+
+        text-align: left;
+        text-transform: capitalize;
+      }
+
+      .vex-field-show,
+      .vex-field-edit {
+        width: 100%;
+
+        display: grid;
+        grid-template: auto / auto 2rem;
+
+        button, a {
+          justify-self: center;
+        }
+
+        input {
+          font-size: 1rem;
         }
       }
     }
   }
   
   section.vex-new-button button {
-    padding: 0 0 4px 0;
+    padding: 0 0 0 0;
 
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
+// Forward button floating at bottom right of screen
 .btn-bottom-right {
   position: fixed;
   width: auto;
@@ -115,13 +154,21 @@ main.content {
     width: 50px;
     height: 50px;
     
+    vertical-align: middle;
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 50%;
     box-shadow: 1px 2px 5px 1px $label-color;
   }
 }
+.vex-post-form .btn-bottom-right {
+  button, input {
+    width: fit-content;
+    border-radius: 5px;
+  }
+}
 
+// Vex init modal
 section.vex-new {
   position: fixed;
   width: 100vw;

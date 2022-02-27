@@ -1,0 +1,15 @@
+<div class="vex-field">
+  <h2 class="vex-label">{{fieldName}}</h2>
+  <div id="vex-field-show-{{fieldName}}" class="vex-field-show">
+    <p class="vex-data">{{fieldValue}}</p>
+    <a href="javascript:void(0);" onclick="setEdit('{{fieldName}}')" class="vex-btn-edit">
+      <i class="fa-solid fa-pen"></i>
+    </a>
+  </div>
+  <div id="vex-field-edit-{{fieldName}}" class="vex-field-edit" style="display: none;">
+    <input type="text" name="{{fieldName}}" value="{{fieldValue}}">
+    <button type="submit" style="border: none; background: none; color: #333;" class="vex-field-submit">
+      <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+  </div>
+</div>

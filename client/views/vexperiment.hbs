@@ -16,51 +16,37 @@
     <main class="content vex">
       {{#with vex}}
       <section class="vex-header">
-        <h1 class="vex-headline">{{name}}</h1>
         <h2 class="vex-date">{{dateConversion date}}</h2>
+        <h1 class="vex-headline">{{name}}</h1>
       </section>
       <section class="vex-body">
-        <div class="vex-field">
-          <h2 class="vex-label">Situation</h2>
-          <p class="vex-data">{{situation}}</p>
-          <a href="/v/new/{{_id}}/pre" class="vex-edit">Bearbeiten</a>
-        </div>
-        <div class="vex-field">
-          <h2 class="vex-label">Personen</h2>
-          <p class="vex-data">{{personen}}</p>
-          <a href="/v/new/{{_id}}/pre" class="vex-edit">Bearbeiten</a>
-        </div>
-        <div class="vex-field">
-          <h2 class="vex-label">Sicherheitsverhalten</h2>
-          <p class="vex-data">{{sicherheitsverhalten}}</p>
-          <a href="/v/new/{{_id}}/pre" class="vex-edit">Bearbeiten</a>
-        </div>
-        <div class="vex-field">
-          <h2 class="vex-label">Befürchtungen</h2>
-          <p class="vex-data">{{befürchtungen}}</p>
-          <a href="/v/new/{{_id}}/pre" class="vex-edit">Bearbeiten</a>
-        </div>
-        <div class="vex-field">
-          <h2 class="vex-label">Experiment</h2>
-          <p class="vex-data">{{experiment}}</p>
-          <a href="/v/new/{{_id}}/pre" class="vex-edit">Bearbeiten</a>
-        </div>
-        <div class="vex-field">
-          <h2 class="vex-label">Ergebnis</h2>
-          <p class="vex-data">{{ergebnis}}</p>
-          <a href="/v/new/{{_id}}/post" class="vex-edit">Bearbeiten</a>
-        </div>
-        <div class="vex-field">
-          <h2 class="vex-label">Lernerfahrungen</h2>
-          <p class="vex-data">{{lernerfahrungen}}</p>
-          <a href="/v/new/{{_id}}/post" class="vex-edit">Bearbeiten</a>
-        </div>
+        <form action="/v/{{_id}}" method="post" class="vex-form">
+          {{> vexField fieldName="situation" fieldValue=situation}}
+          {{> vexField fieldName="personen" fieldValue=personen}}
+          {{> vexField fieldName="sicherheitsverhalten" fieldValue=sicherheitsverhalten}}
+          {{> vexField fieldName="befürchtungen" fieldValue=befürchtungen}}
+          {{> vexField fieldName="experiment" fieldValue=experiment}}
+          {{> vexField fieldName="ergebnis" fieldValue=ergebnis}}
+          {{> vexField fieldName="lernerfahrungen" fieldValue=lernerfahrungen}}
+        </form>
       </section>
       {{/with}}
     </main>
 
     {{> footer}}
   </body>
+
+  <script>
+    const setEdit = fieldName => {
+      document.getElementById(`vex-field-show-${fieldName}`).style.display = 'none';
+      document.getElementById(`vex-field-edit-${fieldName}`).style.display = 'grid';
+    }
+
+    const setShow = fieldName => {
+      document.getElementById(`vex-field-edit-${fieldName}`).style.display = 'none';
+      document.getElementById(`vex-field-show-${fieldName}`).style.display = 'grid';
+    }
+  </script>
 
   <script src="../style/style.js"></script>
 

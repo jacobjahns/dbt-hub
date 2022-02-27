@@ -11,6 +11,7 @@ const auth = (req, res, next) => {
             next()
         })
     } catch {
+        req.session.returnTo = req.originalUrl
         return res.status(401).redirect('/user/login/')
     }
 

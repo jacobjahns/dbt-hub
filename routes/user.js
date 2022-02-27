@@ -62,7 +62,7 @@ router.post('/register', (req, res) => {
                     if(stay) cookieOptions.maxAge = 2592000000
                     res.cookie('jwt', token, cookieOptions)
 
-                    return res.status(304).redirect('/')
+                    return res.status(304).redirect(req.session.returnTo || '/')
                 })
                 .catch(err => console.log(err))
         })
@@ -105,7 +105,7 @@ router.post('/login', (req, res) => {
                 if(stay) cookieOptions.maxAge = 2592000000
                 res.cookie('jwt', token, cookieOptions)
 
-                return res.status(304).redirect('/')
+                return res.status(304).redirect(req.session.returnTo || '/')
             })
         })
         .catch(err => console.log(err))
