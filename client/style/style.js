@@ -1,4 +1,4 @@
-const { isValidObjectId } = require("mongoose");
+//const { isValidObjectId } = require("mongoose");
 
 function navMenuOpen() 
 {
@@ -20,7 +20,8 @@ function navMenuOpen()
         }
     }
 }
-function toggleAuthMenu() 
+
+function toggleAuthMenu()
 {
     if (document.getElementById("navAuth").style.display === "block")
     {
@@ -76,18 +77,21 @@ function textBoxOpen(num)
     }
 }
 
+window.onclick = function(event) {
+    if (event.target == document.getElementById("popupContainer")) {
+        document.getElementById("popupContainer").style.display = "none";
+    }
+}
+
+function closeContainer()
+{
+    document.getElementById("popupContainer").style.display = "none";
+}
+
 function popupOpen(num)
 {
-    if (num == '9000') {
-        document.getElementById("blockScreen").style.display = "none";
-        document.body.style.overflow = "scroll";
-        const list = document.getElementsByClassName("popup");
-        for (const elem of list) elem.style.display = "none";
-        return
-    }
-
     document.body.style.overflow = "hidden";
-    document.getElementById("blockScreen").style.display = "block";
+    document.getElementById("popupContainer").style.display = "flex";
     const list = document.getElementsByClassName("popup");
     list[num].style.display = "grid";
 
