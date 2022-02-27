@@ -1,5 +1,3 @@
-//const { isValidObjectId } = require("mongoose");
-
 function navMenuOpen() 
 {
     if (document.getElementById("mobNavDropdown").style.display === "flex")
@@ -95,4 +93,41 @@ function popupOpen(num)
     const list = document.getElementsByClassName("popup");
     list[num].style.display = "grid";
 
+}
+
+
+// VEx Textboxes
+const textboxSize = { cols: 20, rows: 1 };
+const setTextboxSize = () => {
+    let tb = document.getElementsByClassName('vex-textbox');
+    for(let i = 0; i < tb.length; i++) {
+        tb[i].setAttribute('cols', textboxSize.cols);
+        tb[i].setAttribute('rows', tb[i].innerHTML.split('•').length || Math.ceil(tb[i].innerHTML.length % textboxSize.cols));
+        if(tb[i].innerHTML == '') tb[i].innerHTML = ' • ';
+    }
+}
+
+const addItem = elem => {
+    elem.setAttribute('rows', '' + (parseInt(elem.getAttribute('rows')) + 1))
+    console.log(elem)
+
+    elem.value += '\n • '
+    return true
+}
+
+const handleInput = e => {
+    if(e.target.value == '') return null;
+
+    if(e.key === 'Enter') {
+        addItem(e.target);
+        e.preventDefault();
+    }
+
+    return null;
+}
+
+const textboxes = document.getElementsByClassName('vex-textbox');
+setTextboxSize();
+for(let i = 0; i < textboxes.length; i++) {
+    textboxes[i].addEventListener('keypress', handleInput);
 }

@@ -603,6 +603,15 @@ input:focus {
   outline: none;
 }
 
+input[type='textbox'],
+textarea {
+  padding: 2px;
+  font-size: 1rem;
+  border: 1px solid #b89890;
+  border-radius: 5px;
+  resize: none;
+}
+
 input[type='submit'],
 button {
   -webkit-appearance: none;

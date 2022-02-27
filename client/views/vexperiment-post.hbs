@@ -22,11 +22,11 @@
         <form action="/v/new/{{_id}}/post" method="post" class="vex-form vex-post-form">
           <div class="vex-form-field">
             <label for="ergebnis">Ergebnis*</label>
-            <input type="text" name="ergebnis" class="vex-input" value="{{ergebnis}}">
+            <textarea name="ergebnis" class="vex-input" required>{{ergebnis}}</textarea>
           </div>
           <div class="vex-form-field">
             <label for="lernerfahrungen">Lernerfahrungen</label>
-            <input type="text" name="lernerfahrungen" class="vex-input" value="{{lernerfahrungen}}">
+            <textarea type="textbox" name="lernerfahrungen" class="vex-input">{{lernerfahrungen}}</textarea>
           </div>
           <div class="vex-form-field btn-bottom-right">
             <input type="submit" value="Speichern">
@@ -39,6 +39,6 @@
     {{> footer}}
   </body>
 
-  <script src="../style/style.js"></script>
+  <script src="/style/style.js"></script>
 
 </html>

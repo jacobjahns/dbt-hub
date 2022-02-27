@@ -20,7 +20,7 @@ main.content section.vex-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #b89890;
 }
 
 main.content section.vex-header > * {
@@ -75,7 +75,7 @@ main.content section.vex-body ul.vex-all-list li.vex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #b89890;
   border-collapse: collapse;
 }
 

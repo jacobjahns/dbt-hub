@@ -34,10 +34,19 @@ input {
     border-bottom: 1px solid $label-color;
     border-radius: 0;
   }
-
+  
   &:focus {
     outline: none;
   }
+}
+input[type='textbox'],
+textarea {
+  padding: 2px;
+  
+  font-size: 1rem;
+  border: $border-style;
+  border-radius: 5px;
+  resize: none;
 }
 input[type='submit'],
 button {

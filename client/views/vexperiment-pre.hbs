@@ -22,26 +22,28 @@
         <form action="/v/new/{{_id}}/pre" method="post" class="vex-form vex-pre-form">
           <div class="vex-form-field">
             <label for="situation">Situation*</label>
-            <input type="text" name="situation" class="vex-input" value="{{situation}}">
+            <textarea type="textbox" name="situation" class="vex-input vex-textbox" required>{{situation}}</textarea>
           </div>
           <div class="vex-form-field">
             <label for="personen">Personen</label>
-            <input type="text" name="personen" class="vex-input" value="{{personen}}">
+            <textarea type="textbox" name="personen" class="vex-input">{{personen}}</textarea>
           </div>
           <div class="vex-form-field">
             <label for="sicherheitsverhalten">Sicherheitsverhalten</label>
-            <input type="text" name="sicherheitsverhalten" class="vex-input" value="{{sicherheitsverhalten}}">
+            <textarea type="textbox" name="sicherheitsverhalten" class="vex-input">{{sicherheitsverhalten}}</textarea>
           </div>
           <div class="vex-form-field">
             <label for="befürchtungen">Befürchtungen</label>
-            <input type="text" name="befürchtungen" class="vex-input" value="{{befürchtungen}}">
+            <textarea type="textbox" name="befürchtungen" class="vex-input">{{befürchtungen}}</textarea>
           </div>
           <div class="vex-form-field">
             <label for="experiment">Experiment</label>
-            <input type="text" name="experiment" class="vex-input" value="{{experiment}}">
+            <textarea type="textbox" name="experiment" class="vex-input">{{experiment}}</textarea>
           </div>
           <div class="vex-form-field btn-bottom-right">
-            <input type="submit" value=">">
+            <button type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </form>
       </section>
@@ -51,6 +53,6 @@
     {{> footer}}
   </body>
 
-  <script src="../style/style.js"></script>
+  <script src="/style/style.js"></script>
 
 </html>
