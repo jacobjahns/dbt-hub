@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6ea270afe6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Passwort vergessen</title>
+  </head>
+
+  <body>
+
+    {{> navbar}}
+
+    {{!-- main content --}}
+    <main class="recoverpw auth">
+      <section class="auth-header">
+        <div class="auth-headline">Neues Passwort</div>
+      </section>
+      <section class="auth-body">
+        <form action="/user/newpw/{{user.email}}/{{user.hash}}" method="post" class="auth-form">
+          <div class="auth-form-field">
+            <input type="password" name="password" class="auth-input" required>
+          </div>
+          <div class="auth-form-field">
+            <input type="submit" value="Zurücksetzen" class="auth-submit">
+          </div>
+        </form>
+      </section>
+    </main>
+
+    {{> footer}}
+
+  </body>
+
+  <script src="/style/style.js"></script>
+  
+</html>

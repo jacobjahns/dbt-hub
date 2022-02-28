@@ -8,7 +8,14 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #12302c;
+  color: white;
   padding: 1.5rem 3rem;
+}
+
+.auth.recoverpw {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .auth section {
@@ -45,7 +52,6 @@
   text-align: center;
   font-size: 1.9rem;
   padding: 6px 0;
-  color: white;
 }
 
 .auth .auth-header .auth-other {
@@ -603,7 +609,8 @@ input:focus {
 
 input[type='textbox'],
 textarea {
-  padding: 2px;
+  padding: 8px 10px;
+  font-family: inherit;
   font-size: 1rem;
   border: 1px solid #b89890;
   border-radius: 5px;

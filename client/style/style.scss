@@ -41,8 +41,9 @@ input {
 }
 input[type='textbox'],
 textarea {
-  padding: 2px;
+  padding: 8px 10px;
   
+  font-family: inherit;
   font-size: 1rem;
   border: $border-style;
   border-radius: 5px;

@@ -4,7 +4,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   background-color: $BGdark-color;
+  color: white;
   padding: 1.5rem 3rem;
+
+  &.recoverpw {
+    justify-content: flex-start;
+  }
 
   section {
     display: flex;
@@ -24,7 +29,6 @@
       text-align: center;
       font-size: 1.9rem;
       padding: 6px 0;
-      color: white;
     }
     .auth-other {
       text-align: center;
