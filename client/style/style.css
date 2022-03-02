@@ -434,10 +434,6 @@
   -ms-grid-columns: auto 80px;
       grid-template-columns: auto 80px;
   grid-auto-rows: auto;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 #gefuehlTab div.gefuehlBox {
@@ -494,20 +490,26 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
-  padding: 5px 10px;
+  padding: 5px 0;
 }
 
-#gefuehlTab div.explBox div div {
+#gefuehlTab div.explBox div {
+  padding-left: 10px;
+}
+
+#gefuehlTab div.explBox div span {
   font-size: 1.5rem;
   color: #eee;
 }
@@ -519,8 +521,12 @@
 }
 
 #popupContainer {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
+  visibility: hidden;
+  opacity: 0;
   z-index: 10002;
   left: 0;
   top: 0;
@@ -533,40 +539,81 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: opacity 0.1s ease-out, visibility 0.1s;
+  transition: opacity 0.1s ease-out, visibility 0.1s;
 }
 
 #popupContainer .popup {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: white;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 10002;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding: 20px;
+  border-radius: 22px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px;
 }
 
-#popupContainer .popup .yesNo {
-  height: 50px;
-  width: 50px;
-  font-size: 2rem;
-  background-color: white;
-  color: gray;
-  border: 1px solid gray;
-  border-radius: 100%;
+#popupContainer .popup .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  color: #444;
 }
 
-@media (min-width: 1024px) {
-  .explBox {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
-    -ms-flex-pack: distribute !important;
-        justify-content: space-around !important;
-  }
+#popupContainer .popup .description span {
+  font-size: 1.3rem;
+}
+
+#popupContainer .popup .selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+#popupContainer .popup .selection .yes {
+  width: 50%;
+  font-size: 2.3rem;
+  padding: 0.3rem;
+  background-color: #58b957;
+  border: none;
+  border-bottom-left-radius: 22px;
+}
+
+#popupContainer .popup .selection .yes:active {
+  color: #ffc547;
+}
+
+#popupContainer .popup .selection .no {
+  width: 50%;
+  padding: 0.3rem;
+  font-size: 2.3rem;
+  background-color: #ed5e68;
+  border: none;
+  border-bottom-right-radius: 22px;
+}
+
+#popupContainer .popup .selection .no:active {
+  color: #666;
 }
 
 * {

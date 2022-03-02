@@ -11,7 +11,6 @@
     display: grid;
     grid-template-columns: auto 80px;
     grid-auto-rows: auto;
-    user-select: none;
 
     div {
         &.gefuehlBox {
@@ -52,12 +51,15 @@
             display: none; //flex
             border: 1px inset #466b23;
             justify-content: flex-start;
-            flex-direction: column;
-            align-items: left;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
             grid-column: 1 / span 2;
-            padding: 5px 10px;
+            padding: 5px 0;
             div{
-                div {
+
+                padding-left: 10px;
+                span {
                     font-size: 1.5rem;
                     color: #eee;
                 }
@@ -72,8 +74,10 @@
 }
 
 #popupContainer {
-    display: none;
+    display: flex;
     position: fixed;
+    visibility: hidden;
+    opacity: 0;
     z-index: 10002;
     left: 0;
     top: 0;
@@ -82,31 +86,56 @@
     background-color: rgba(0,0,0,0.4);
     justify-content: center;
     align-items: center;
+    transition:opacity 0.1s ease-out, visibility 0.1s;
 
     .popup {
-        display: grid;
+        display: flex;
         background-color: white;
         text-align: center;
+        flex-direction: column;
         z-index: 10002;
         user-select: none;
-        padding: 20px;
+        border-radius: 22px;
+        box-shadow: 0 10px 20px rgba(black, 0.2);
+        margin: 20px;
 
-        .yesNo {
-            height: 50px;
-            width: 50px;
-            font-size: 2rem;
-            background-color: white;
-            color: gray;
-            border: 1px solid gray;
-            border-radius: 100%;
+        .description {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            color: #444;
+
+            span{
+                font-size: 1.3rem;
+            }
+        }
+        .selection {
+            display: flex;
+            justify-content: center;
+            color: white;
+
+            .yes {
+                width: 50%;
+                font-size: 2.3rem;
+                padding: 0.3rem;
+                background-color: #58b957;
+                border: none;
+                border-bottom-left-radius: 22px;
+                &:active {
+                    color: rgb(255, 197, 71);
+                }
+            }
+            .no {
+                width: 50%;
+                padding: 0.3rem;
+                font-size: 2.3rem;
+                background-color: #ed5e68;
+                border: none;
+                border-bottom-right-radius: 22px;
+                &:active {
+                    color: #666;
+                }
+            }
         }
     }
 }
-
-@media (min-width: 1024px) {
-    .explBox {
-        flex-direction: row!important;
-        justify-content: space-around!important;
-    }
-}
-

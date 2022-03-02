@@ -27,10 +27,10 @@ router.get('/', (req, res) => {
 // @route   GET /gefuehl-aha
 // @desc    Provide gefuehl-aha
 // @access  Public
-router.get('/gefuehl-aha', (req, res) => {
+router.get('/eregulation', (req, res) => {
 
     const templateStr = fs
-                .readFileSync(path.join(__dirname, '../client/views/gefuehl-aha.hbs'))
+                .readFileSync(path.join(__dirname, '../client/views/eregulation.hbs'))
                 .toString('utf8');
             const template = handlebars.compile(templateStr);
 

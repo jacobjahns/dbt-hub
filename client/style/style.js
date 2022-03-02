@@ -79,18 +79,20 @@ function textBoxOpen(num)
 //Close Popup when Container is clicked
 window.onclick = function(event) {
     if (event.target == document.getElementById("popupContainer")) {
-        document.getElementById("popupContainer").style.display = "none";
+        document.getElementById("popupContainer").style.visibility = "hidden";
+        document.getElementById("popupContainer").style.opacity = 0;
         document.body.style.overflow = "auto";
     }
 }
 
 //Display Popup-container and selected popups inside
-function popupOpen(num)
+function popupOpen(emot)
 {
     document.body.style.overflow = "hidden";
-    document.getElementById("popupContainer").style.display = "flex";
-    const list = document.getElementsByClassName("popup");
-    list[num].style.display = "grid";
+    document.getElementById("popupContainer").style.visibility = "visible";
+    document.getElementById("popupContainer").style.opacity = 1;
+    /* const list = document.getElementsByClassName("popup");
+    list[0].style.display = "flex"; */
 
 }
 
