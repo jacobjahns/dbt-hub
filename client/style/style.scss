@@ -78,9 +78,10 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
+  align-items: center;
   min-height: calc(100vh - 7rem);
-  margin: 5rem 0 2rem;
+  margin-top: 4em;
+  padding-top: 1em;
 }
 
 h1{

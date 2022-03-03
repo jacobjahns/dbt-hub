@@ -1,11 +1,24 @@
 @import '_variables.scss';
 
+@keyframes authOpen {
+  from {max-height: 0;}
+  to {max-height: 100vh;}
+}
+@keyframes authShowContent {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 .auth {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-self: center;
   background-color: $BGdark-color;
   color: white;
   padding: 1.5rem 3rem;
+  user-select: none;
+  width: 100%;
+  animation: dropdown 0.15s ease-out;
 
   &.recoverpw {
     justify-content: flex-start;
@@ -15,8 +28,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     padding: 1rem 0;
+    animation: authShowContent 0.25s ease-in;
   }
   
   .auth-header {
@@ -27,12 +40,12 @@
 
     .auth-headline {
       text-align: center;
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       padding: 6px 0;
     }
     .auth-other {
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -51,23 +64,23 @@
       .auth-form-wrap {
         display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: flex-start;
 
         label {
-          padding-left: 4px;
-          padding-top: 1px;
           color: white;
+          font-size: 1.2rem;
+
+          input{
+            width: 1rem;
+            height: 1rem;
+            background-color: #eee;
+            margin-right: 5px;
+          }
         }
       }
 
-      label {
-        font-size: .9rem;
-        padding-bottom: 4px;
-        color: white;
-      }
-
       input {
-        font-size: 1rem;
+        font-size: 1.2rem;
 
         &[type="submit"] {
           &:active {
@@ -83,7 +96,7 @@
       justify-content: center;
 
       a {
-        font-size: .7rem;
+        font-size: 1rem;
       }
     } 
   }

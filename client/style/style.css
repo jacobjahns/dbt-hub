@@ -1,15 +1,60 @@
 @charset "UTF-8";
+@-webkit-keyframes authOpen {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100vh;
+  }
+}
+@keyframes authOpen {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100vh;
+  }
+}
+
+@-webkit-keyframes authShowContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes authShowContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .auth {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background-color: #12302c;
   color: white;
   padding: 1.5rem 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  -webkit-animation: dropdown 0.15s ease-out;
+          animation: dropdown 0.15s ease-out;
 }
 
 .auth.recoverpw {
@@ -30,6 +75,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem 0;
+  -webkit-animation: authShowContent 0.25s ease-in;
+          animation: authShowContent 0.25s ease-in;
 }
 
 .auth .auth-header {
@@ -50,13 +97,13 @@
 
 .auth .auth-header .auth-headline {
   text-align: center;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   padding: 6px 0;
 }
 
 .auth .auth-header .auth-other {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .auth .auth-body .auth-form {
@@ -93,25 +140,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .auth .auth-body .auth-form .auth-form-field .auth-form-wrap label {
-  padding-left: 4px;
-  padding-top: 1px;
   color: white;
+  font-size: 1.2rem;
 }
 
-.auth .auth-body .auth-form .auth-form-field label {
-  font-size: .9rem;
-  padding-bottom: 4px;
-  color: white;
+.auth .auth-body .auth-form .auth-form-field .auth-form-wrap label input {
+  width: 1rem;
+  height: 1rem;
+  background-color: #eee;
+  margin-right: 5px;
 }
 
 .auth .auth-body .auth-form .auth-form-field input {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .auth .auth-body .auth-form .auth-form-field input[type="submit"]:active {
@@ -132,13 +179,51 @@
 }
 
 .auth .auth-body .auth-form .auth-recover-password a {
-  font-size: .7rem;
+  font-size: 1rem;
 }
 
 #navAuth {
   -ms-flex-item-align: start;
       align-self: flex-start;
   display: none;
+  width: 100%;
+  max-width: 375px;
+}
+
+@-webkit-keyframes dropdown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100vh;
+  }
+}
+
+@keyframes dropdown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100vh;
+  }
+}
+
+@-webkit-keyframes dropdownText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #navBar {
@@ -243,18 +328,21 @@
       -ms-flex-pack: stretch;
           justify-content: stretch;
   background-color: #12302c;
+  -webkit-animation: dropdown 0.15s ease-out;
+          animation: dropdown 0.15s ease-out;
 }
 
-#navBar .mobileNav #mobNavDropdown div {
-  padding: 18px 20px;
+#navBar .mobileNav #mobNavDropdown a:not(:last-child) {
   border-bottom: 1px solid #ffffff32;
 }
 
 #navBar .mobileNav #mobNavDropdown a {
   color: #f7f7f7;
   text-decoration: none;
-  padding: 18px 20px;
+  padding: 13px 20px;
   font-size: 32px;
+  -webkit-animation: dropdownText 0.25s ease-in;
+          animation: dropdownText 0.25s ease-in;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -428,9 +516,29 @@
       align-self: flex-start;
 }
 
+@-webkit-keyframes smoothText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes smoothText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #gefuehlTab {
   display: -ms-grid;
   display: grid;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
   -ms-grid-columns: auto 80px;
       grid-template-columns: auto 80px;
   grid-auto-rows: auto;
@@ -477,10 +585,16 @@
           align-items: center;
   cursor: pointer;
   border-bottom: 1px solid #ca5928e6;
+  color: white;
 }
 
 #gefuehlTab div.iconBox i {
-  color: white;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#gefuehlTab div.iconBox:hover i {
+  margin-left: 8px;
 }
 
 #gefuehlTab div.explBox {
@@ -506,6 +620,8 @@
 }
 
 #gefuehlTab div.explBox div {
+  -webkit-animation: smoothText 0.1s ease-out;
+          animation: smoothText 0.1s ease-out;
   padding-left: 10px;
 }
 
@@ -517,7 +633,7 @@
 #gefuehlTab div.explBox div ul {
   font-size: 1.1rem;
   color: #eee;
-  margin: 1px 0 4px 20px;
+  margin: 1px 0 4px 16px;
 }
 
 #popupContainer {
@@ -584,7 +700,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 15px;
-  color: #444;
+  color: #222;
 }
 
 #popupContainer .popup .description span {
@@ -652,7 +768,7 @@
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 15px;
-  color: #444;
+  color: #222;
   border-bottom: 1px solid #6666;
 }
 
@@ -708,7 +824,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 5px 15px 15px 15px;
-  color: #444;
+  color: #222;
   text-align: left;
 }
 
@@ -813,8 +929,12 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: calc(100vh - 7rem);
-  margin: 5rem 0 2rem;
+  margin-top: 4em;
+  padding-top: 1em;
 }
 
 h1 {

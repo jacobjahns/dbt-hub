@@ -4,6 +4,17 @@
 #navAuth {
   align-self: flex-start;
   display: none;
+  width: 100%;
+  max-width: 375px;
+}
+
+@keyframes dropdown {
+  from {max-height: 0;}
+  to {max-height: 100vh;}
+}
+@keyframes dropdownText {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 #navBar {
@@ -65,17 +76,18 @@
       align-items: center;
       justify-content: stretch;
       background-color: $BGdark-color;
-    
-      div {
-      padding: 18px 20px;
+      animation: dropdown 0.15s ease-out;
+
+      a:not(:last-child) {
       border-bottom: 1px solid #ffffff32;
       }
 
       a {
       color: #f7f7f7;
       text-decoration: none;
-      padding: 18px 20px;
+      padding: 13px 20px;
       font-size: 32px;
+      animation: dropdownText 0.25s ease-in;
       }
     }
   }

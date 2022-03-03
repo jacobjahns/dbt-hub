@@ -7,8 +7,14 @@
     align-self: flex-start;
   }
 
+@keyframes smoothText {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 #gefuehlTab {
     display: grid;
+    align-self: stretch;
     grid-template-columns: auto 80px;
     grid-auto-rows: auto;
 
@@ -41,9 +47,13 @@
             align-items: center;
             cursor: pointer;
             border-bottom: 1px solid #ca5928e6;
+            color: white;
 
             i {
-                color: white;
+                transition: all 0.4s ease-out;
+            }
+            &:hover i {
+                margin-left: 8px;
             }
         }
         &.explBox {
@@ -56,8 +66,9 @@
             flex-wrap: wrap;
             grid-column: 1 / span 2;
             padding: 5px 0;
-            div{
 
+            div{
+                animation: smoothText 0.1s ease-out;
                 padding-left: 10px;
                 span {
                     font-size: 1.5rem;
@@ -66,7 +77,7 @@
                 ul {
                     font-size: 1.1rem;
                     color: #eee;
-                    margin: 1px 0 4px 20px;
+                    margin: 1px 0 4px 16px;
                 }
             }
         }
@@ -110,7 +121,7 @@
             display: flex;
             flex-direction: column;
             padding: 15px;
-            color: #444;
+            color: #222;
 
             span{
                 font-size: 1.3rem;
@@ -159,7 +170,7 @@
             justify-content: space-between;
             align-items: stretch;
             padding: 15px;
-            color: #444;
+            color: #222;
             border-bottom: 1px solid #6666;
 
             >span{
@@ -188,7 +199,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             padding: 5px 15px 15px 15px;
-            color: #444;
+            color: #222;
             text-align: left;
 
             h2 {
