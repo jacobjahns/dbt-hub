@@ -76,24 +76,108 @@ function textBoxOpen(num)
     }
 }
 
-//Close Popup when Container is clicked
+//Close Popup and reset all when Container is clicked
 window.onclick = function(event) {
     if (event.target == document.getElementById("popupContainer")) {
         document.getElementById("popupContainer").style.visibility = "hidden";
         document.getElementById("popupContainer").style.opacity = 0;
         document.body.style.overflow = "auto";
+        const list = document.getElementsByClassName("popup");
+        for (const elem of list) {
+            elem.style.visibility = "hidden";
+            elem.style.opacity = 0;
+            elem.style.height = 0;
+        }
+        const emotDescrList = document.getElementsByClassName("emotDescr");
+        for (const elem of emotDescrList) {
+            elem.style.display = "none";
+        }
     }
 }
 
 //Display Popup-container and selected popups inside
-function popupOpen(emot)
+let currEmot; //Keep last selected Emotion
+
+function popupOpen(currPopup , emot = '')
 {
+    const list = document.getElementsByClassName("popup");
+
+    if (emot != '') {
+        currEmot = emot;
+        const varList = document.getElementsByClassName("var");
+        for (const elem of varList) {
+            elem.textContent=currEmot;
+        }
+    }
+
+    console.log(currPopup, currEmot);
+
     document.body.style.overflow = "hidden";
     document.getElementById("popupContainer").style.visibility = "visible";
     document.getElementById("popupContainer").style.opacity = 1;
-    /* const list = document.getElementsByClassName("popup");
-    list[0].style.display = "flex"; */
 
+    switch (currPopup) {
+        case 0:
+            list[0].style.visibility = "visible";
+            list[0].style.opacity = 1;
+            list[0].style.height = 'auto';
+            
+            break;
+        case 1:
+            list[0].style.visibility = "hidden";
+            list[0].style.opacity = 0;
+            list[0].style.height = 0;
+            list[1].style.visibility = "visible";
+            list[1].style.opacity = 1;
+            list[1].style.height = 'auto';
+            break;
+        case 2:
+            list[1].style.visibility = "hidden";
+            list[1].style.opacity = 0;
+            list[1].style.height = 0;
+            list[2].style.visibility = "visible";
+            list[2].style.opacity = 1;
+            list[2].style.height = 'auto';
+            break;
+        case 3:
+            list[2].style.visibility = "hidden";
+            list[2].style.opacity = 0;
+            list[2].style.height = 0;
+            list[3].style.visibility = "visible";
+            list[3].style.opacity = 1;
+            list[3].style.height = 'auto';
+            break;
+        case 4:
+            for (const elem of list) {
+                elem.style.visibility = "hidden";
+                elem.style.opacity = 0;
+                elem.style.height = 0;
+            }
+            list[4].style.visibility = "visible";
+            list[4].style.opacity = 1;
+            list[4].style.height = 'auto';
+            switch (currEmot) {
+                case 'Trauer':
+                    document.getElementById(currEmot).style.display="flex";
+                    break;
+            }
+
+            break;
+        case 'close':
+            document.getElementById("popupContainer").style.visibility = "hidden";
+            document.getElementById("popupContainer").style.opacity = 0;
+            document.body.style.overflow = "auto";
+            for (const elem of list) {
+                elem.style.visibility = "hidden";
+                elem.style.opacity = 0;
+                elem.style.height = 0;
+            }
+            const emotDescrList = document.getElementsByClassName("emotDescr");
+            for (const elem of emotDescrList) {
+                elem.style.display = "none";
+            }
+            break;
+    }
 }
 
 // VEx Textboxes

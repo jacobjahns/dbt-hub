@@ -21,7 +21,7 @@
             <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
             <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
         </div>
-        <div class="iconBox" onclick="popupOpen(0)">
+        <div class="iconBox" onclick="popupOpen(0,'Trauer')">
             <i class="fa-solid fa-arrow-right-long"></i>
         </div>
         <div class="explBox">
@@ -52,7 +52,7 @@
             <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
             <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>            
         </div>
-        <div class="iconBox">
+        <div class="iconBox" onclick="popupOpen(0,'Wut')">
             <i class="fa-solid fa-arrow-right-long"></i>
         </div>
         <div class="explBox">
@@ -63,7 +63,7 @@
             <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
             <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
         </div>
-        <div class="iconBox">
+        <div class="iconBox" onclick="popupOpen(0,'Angst')">
             <i class="fa-solid fa-arrow-right-long"></i>
         </div>
         <div class="explBox">
@@ -78,8 +78,59 @@
                 <span>(Intensität unter 70%)</span>
             </div>
             <div class="selection">
-                <button class="yes"><i class="fa-solid fa-check"></i></button>
-                <button class="no"><i class="fa-solid fa-xmark"></i></button>
+                <button class="yes" onclick="popupOpen(1)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <button class="no" onclick="popupOpen(4)"><i class="fa-solid fa-thumbs-down"></i></button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="description">
+                <span>Ist meine <span class="var"></span> der Situation angemessen?</span>
+                <span>(Kein Sekundärgefühl oder altes Erleben)</span>
+            </div>
+            <div class="selection">
+                <button class="yes" onclick="popupOpen(2)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <button class="no" onclick="popupOpen(4)"><i class="fa-solid fa-thumbs-down"></i></button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="description">
+                <span>Ist mein Handlungsimpuls auch langfristig sinnvoll?</span>
+            </div>
+            <div class="selection">
+                <button class="yes" onclick="popupOpen(3)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <button class="no" onclick="popupOpen(4)"><i class="fa-solid fa-thumbs-down"></i></button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="description">
+                <span>Folge deinem Handlungsimpuls!</span>
+                <span>Tu das, was dir deine <span class="var"></span> rät.</span>
+            </div>
+            <div class="selection">
+                <button class="ok" onclick="popupOpen('close')">ok</button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="popupHead">
+                <span><span class="var"></span>&nbsp;abschwächen!</span>
+                <a href="javascript:void(0);" onclick="popupOpen('close')">
+                    <i class="fa-solid fa-xmark fa-lg"></i>
+                </a>
+            </div>
+            <div class="emotDescr" id="Trauer">
+                <h2>Entgegengesetzt...</h2>
+                <h2>Denken</h2>
+                <ul>
+                    <li>Gib dem Verlorenen einen Platz in deinem Herzen.</li>
+                    <li>Denke an die Zeit, die dir mit der Person geschenkt wurde.</li>
+                    <li>Denke daran, dass es vielleicht auch einen verborgenen Sinn gibt.</li>
+                </ul>
+                <h2>Handeln</h2>
+                <ul>
+                    <li>Trauer auf bestimme Orte, Zeiten begrenzen (Trauerrituale)</li>
+                    <li>nach einiger Zeit Erinnerungen aus Alltag nehmen und an Gedenkstätte aufbewahren</li>
+                    <li>dadurch auf Dauer zur Akzeptanz kommen</li>
+                </ul>
             </div>
         </div>
     </div>

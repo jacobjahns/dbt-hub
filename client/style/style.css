@@ -526,10 +526,15 @@
   display: flex;
   position: fixed;
   visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   opacity: 0;
   z-index: 10002;
   left: 0;
   top: 0;
+  padding: 20px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -558,10 +563,16 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border-radius: 22px;
+  border-radius: 15px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  margin: 20px;
+  border: 1px solid #fff;
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  -webkit-transition: opacity 0.1s ease-out, visibility 0.1s;
+  transition: opacity 0.1s ease-out, visibility 0.1s;
 }
 
 #popupContainer .popup .description {
@@ -592,28 +603,127 @@
 
 #popupContainer .popup .selection .yes {
   width: 50%;
-  font-size: 2.3rem;
-  padding: 0.3rem;
-  background-color: #58b957;
+  font-size: 2.2rem;
+  padding: 0.4rem;
+  background-color: #3e9f3c;
   border: none;
-  border-bottom-left-radius: 22px;
 }
 
 #popupContainer .popup .selection .yes:active {
-  color: #ffc547;
+  color: #e8b730;
 }
 
 #popupContainer .popup .selection .no {
   width: 50%;
-  padding: 0.3rem;
-  font-size: 2.3rem;
-  background-color: #ed5e68;
+  padding: 0.4rem;
+  font-size: 2.2rem;
+  background-color: #e12d39;
   border: none;
-  border-bottom-right-radius: 22px;
 }
 
 #popupContainer .popup .selection .no:active {
   color: #666;
+}
+
+#popupContainer .popup .selection .ok {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 2rem;
+  background-color: #3e9f3c;
+  border: none;
+}
+
+#popupContainer .popup .selection .ok:active {
+  color: #e8b730;
+}
+
+#popupContainer .popup .popupHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 15px;
+  color: #444;
+  border-bottom: 1px solid #6666;
+}
+
+#popupContainer .popup .popupHead > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#popupContainer .popup .popupHead a {
+  font-size: 1.8rem;
+  margin-left: 15px;
+  padding: 0;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+#popupContainer .popup .emotDescr {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5px 15px 15px 15px;
+  color: #444;
+  text-align: left;
+}
+
+#popupContainer .popup .emotDescr h2 {
+  font-size: 1.3rem;
+  padding-top: 10px;
+}
+
+#popupContainer .popup .emotDescr ul {
+  font-size: 1rem;
+  padding-left: 15px;
+}
+
+#popupContainer .popup .emotDescr ul li {
+  padding-top: 3px;
 }
 
 * {
@@ -626,7 +736,7 @@
 
 :root {
   font-size: 16px;
-  font-family: "Gill Sans", Helvetica, sans-serif;
+  font-family: Tahoma, Helvetica, sans-serif;
 }
 
 :root,
