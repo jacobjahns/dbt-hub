@@ -340,7 +340,7 @@
 #navBar .mobileNav #mobNavDropdown a {
   color: #f7f7f7;
   text-decoration: none;
-  padding: 13px 20px;
+  padding: 15px 20px;
   font-size: 32px;
   -webkit-animation: dropdownText 0.25s ease-in;
           animation: dropdownText 0.25s ease-in;
@@ -478,7 +478,7 @@
 
 .footer .fooLinks a {
   padding: 3px;
-  margin: 5px 20px;
+  margin: 15px 20px;
   color: #f7f7f7;
   text-decoration: none;
   font-size: 1.5rem;
@@ -832,6 +832,8 @@
 #popupContainer .popup .emotDescr h2 {
   font-size: 1.3rem;
   padding-top: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 #popupContainer .popup .emotDescr ul {

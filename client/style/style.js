@@ -160,6 +160,12 @@ function popupOpen(currPopup , emot = '')
                 case 'Trauer':
                     document.getElementById(currEmot).style.display="flex";
                     break;
+                case 'Wut':
+                    document.getElementById(currEmot).style.display="flex";
+                    break;
+                case 'Angst':
+                    document.getElementById(currEmot).style.display="flex";
+                    break;
             }
 
             break;
