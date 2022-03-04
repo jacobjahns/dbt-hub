@@ -10,12 +10,14 @@
 {{> navbar}}
 
 <main>
-    <h1>Emotionsregulation</h1>
-    <hr>
+
+    <section class="header">
+        <h1>Emotionsregulation</h1>
+        <hr>
+    </section>
 
     <a href="#explanation" class="linkClassic">Wie funktioniert es?</a>
-
-    <div id="gefuehlTab">
+    <section id="gefuehlTab">
         <div class="gefuehlBox" onclick="textBoxOpen(0)">
             <div>Trauer</div>
             <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
@@ -69,9 +71,28 @@
         <div class="explBox">
             <div>test</div>
         </div>
-    </div>
+    </section>
 
-    <div id="popupContainer">
+    <section id="explanation">
+        <h2>Wie funktioniert es?</h2>
+        <hr>
+        <div>Wähle dein aktuelles Gefühl.</div>
+        <div>Wenn du dir bei einem Gefühl nicht sicher bist, klicke auf den Pfeil daneben, um eine Beschreibung zu bekommen.</div>
+        <div>Dann werden dir nacheinander 3 Fragen zum Gefühl gestellt.</div>
+        </div>
+        <ol>
+            <li>Kann ich noch sinnvoll Handeln?</li>
+            <li>Ist mein Gefühl der Situation angemessen?</li>
+            <li>Ist mein Handlungsimpuls auch langfristig sinnvoll?</li>
+        </ol>
+        <div>Wenn du alle Fragen mit "Daumen hoch" bestätigen kannst, folge dem Handlungsimpuls des Gefühls.</div>
+        <div>Ansonsten muss das Gefühl abgeschwächt werden!</div>
+        <div>Dabei geht es allerdings nicht um Verdrängung, sondern um einen funktionaleren Weg mit der Emotion umzugehen.</div>
+        <div>Nachdem das Gefühl abgeschwächt wurde, solltest du daher nochmal reflektieren, wie du richtig (funktional) Handelst.</div>
+        
+    </section>
+
+    <dev id="popupContainer">
         <div class="popup">
             <div class="description">
                 <span>Kann ich noch sinnvoll Handeln?</span>

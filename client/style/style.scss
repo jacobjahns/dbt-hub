@@ -20,6 +20,14 @@ body {
   height: 100%;
 }
 
+section {
+  margin: 40px 15px 0 15px;
+
+  &.header {
+    margin: 20px 15px 0 15px;
+  }
+}
+
 label {
   display: block;
   // font-weight: bold;
@@ -85,14 +93,16 @@ main{
 }
 
 h1{
-  text-align: center;
+  font-size: 1.8rem;
   color: $BG-color;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 1.1rem;
-  font-weight: normal;
+  font-size: 1.4rem;
+  color: $BG-color;
+  font-weight: bold;
+  align-self: center;
 }
 
 hr{
