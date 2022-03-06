@@ -306,10 +306,11 @@
   width: 25%;
 }
 
-#navBar .mobileNav #mobNavBar #mobNavLeft a {
+#navBar .mobileNav #mobNavBar #mobNavLeft div {
   color: white;
   padding: 15px 20px;
   font-size: 32px;
+  cursor: pointer;
 }
 
 #navBar .mobileNav #xMark {
