@@ -46,10 +46,11 @@
         justify-content: flex-end;
         align-items: center;
         width: 25%;
-        a {
+        div {
           color: white;
           padding: 15px 20px;
           font-size: 32px;
+          cursor: pointer;
           }
       }
       #mobNavLeft {
