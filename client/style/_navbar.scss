@@ -2,22 +2,14 @@
 
 
 #navAuth {
-  align-self: flex-start;
-  display: none;
+  display: flex;
   width: 100%;
   max-width: 375px;
+  transform: translateX(-375px);
+  transition: transform 0.15s ease-out;
 }
 
-@keyframes dropdown {
-  from {max-height: 0;}
-  to {max-height: 100vh;}
-}
-@keyframes dropdownText {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-#navBar {
+#navigation {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -25,138 +17,88 @@
   left: 0;
   right: 0;
   user-select: none;
-
-  /* Mobile Nav */
-  .mobileNav {
+  margin: 0;
+  z-index: 99999;
     
-    #mobNavBar {
+  #navBar {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: #183f39;
+  
+    #titleBox {
       display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      background-color: #183f39;
-    
-      #titleBox {
-        display: flex;
-        width: auto;
-        justify-content: center;
-        align-items: center;
-      }
-      #mobNavRight {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 25%;
-        div {
-          color: white;
-          padding: 15px 20px;
-          font-size: 32px;
-          cursor: pointer;
-          }
-      }
-      #mobNavLeft {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 25%;
-        div {
-          color: white;
-          padding: 15px 20px;
-          font-size: 32px;
-          cursor: pointer;
-        }
-      }
-    }
-    
-    #xMark {
-      display: none;
-      background-color: darken($BG-color, $amount: 4%);
-    }
-    
-    #mobNavDropdown {
-      display: none;
-      flex-direction: column;
+      width: auto;
+      justify-content: center;
       align-items: center;
-      justify-content: stretch;
-      background-color: $BGdark-color;
-      animation: dropdown 0.15s ease-out;
-
-      a:not(:last-child) {
-      border-bottom: 1px solid #ffffff32;
+    }
+    #navBarRight {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 20%;
+      div {
+        color: white;
+        padding: 15px 20px;
+        font-size: 32px;
+        cursor: pointer;
       }
+      #xMark {
+        display: none;
+        background-color: darken($BG-color, $amount: 4%);
+      }
+    }
+    #navBarLeft {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 20%;
+      div {
+        color: white;
+        padding: 15px 20px;
+        font-size: 32px;
+        cursor: pointer;
+      }
+    }
+  }
+  #dropdownMenus {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    
+    #navDropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      max-width: 500px;
+      transform: translateX(500px);
+      background-color: $BGdark-color;
+      transition: transform 0.15s ease-out;
 
       a {
       color: #f7f7f7;
       text-decoration: none;
-      padding: 15px 20px;
+      padding: 20px 10px;
+      margin: 0 auto;
       font-size: 32px;
-      animation: dropdownText 0.25s ease-in;
+      text-align: center;
+        &:not(:last-child) {
+          border-bottom: 1px solid #ffffff32;
+        }
+        &:hover {
+          color: $link-color;
+        }
       }
     }
   }
-    
-    /* Desktop Nav */
-    @media only screen and (min-width: 1024px) {
-      .mobileNav {
-        display: none!important;
-      }
-      .desktopNav {
-        display: flex!important;
-      }
-    }
-    
-    .desktopNav {
-      display: none;
-      align-items: stretch;
-      justify-content: space-between;
-      background-color: $BG-color;
-    
-        #titleBox {
-          display: flex;
-          width: 33.3333%;
-          justify-content: center;
-          align-items: center;
-        }
-        #deskNavRight {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          width: 33.3333%;
-          a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 32px;
-            font-weight: 400;
-            &:hover {
-              background-color: $BGdark-color;         
-            }
-          }
-        }
-        #deskNavLeft {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          width: 33.3333%;
-          a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 32px;
-            font-weight: 400;
-            &:hover {
-              background-color: #12302c;         
-            }
-          }
-        }
-      }
-    }
+}
   
-  /* General */
-  
-  #title {
-    color: white;
-    font-size: 35px;
-    text-decoration: none;
-    font-weight: bolder;
-    padding: 3px 3px;
-  }
+#title {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 3px 3px;
+}
