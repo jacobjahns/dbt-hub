@@ -2,11 +2,10 @@
 
 
 #navAuth {
-  display: flex;
+  display: none;
+  align-self: flex-start;
   width: 100%;
   max-width: 375px;
-  transform: translateX(-375px);
-  transition: transform 0.15s ease-out;
 }
 
 #navigation {
@@ -61,35 +60,29 @@
       }
     }
   }
-  #dropdownMenus {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin: 0;
-    
-    #navDropdown {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      width: 100%;
-      max-width: 500px;
-      transform: translateX(500px);
-      background-color: $BGdark-color;
-      transition: transform 0.15s ease-out;
+  
+  #navDropdown {
+    display: none; //flex
+    align-self: flex-end;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 500px;
+    background-color: $BGdark-color;
+    animation: flyInRight 0.15s ease-out;
 
-      a {
-      color: #f7f7f7;
-      text-decoration: none;
-      padding: 20px 10px;
-      margin: 0 auto;
-      font-size: 32px;
-      text-align: center;
-        &:not(:last-child) {
-          border-bottom: 1px solid #ffffff32;
-        }
-        &:hover {
-          color: $link-color;
-        }
+    a {
+    color: #f7f7f7;
+    text-decoration: none;
+    padding: 20px 10px;
+    margin: 0 auto;
+    font-size: 32px;
+    text-align: center;
+      &:not(:last-child) {
+        border-bottom: 1px solid #ffffff32;
+      }
+      &:hover {
+        color: $link-color;
       }
     }
   }

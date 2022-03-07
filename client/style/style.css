@@ -147,17 +147,11 @@
 }
 
 #navAuth {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   width: 100%;
   max-width: 375px;
-  -webkit-transform: translateX(-375px);
-          transform: translateX(-375px);
-  -webkit-transition: -webkit-transform 0.15s ease-out;
-  transition: -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
 
 #navigation {
@@ -251,23 +245,10 @@
   cursor: pointer;
 }
 
-#navigation #dropdownMenus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0;
-}
-
-#navigation #dropdownMenus #navDropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#navigation #navDropdown {
+  display: none;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -277,16 +258,12 @@
           align-items: stretch;
   width: 100%;
   max-width: 500px;
-  -webkit-transform: translateX(500px);
-          transform: translateX(500px);
   background-color: #12302c;
-  -webkit-transition: -webkit-transform 0.15s ease-out;
-  transition: -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
+  -webkit-animation: flyInRight 0.15s ease-out;
+          animation: flyInRight 0.15s ease-out;
 }
 
-#navigation #dropdownMenus #navDropdown a {
+#navigation #navDropdown a {
   color: #f7f7f7;
   text-decoration: none;
   padding: 20px 10px;
@@ -295,11 +272,11 @@
   text-align: center;
 }
 
-#navigation #dropdownMenus #navDropdown a:not(:last-child) {
+#navigation #navDropdown a:not(:last-child) {
   border-bottom: 1px solid #ffffff32;
 }
 
-#navigation #dropdownMenus #navDropdown a:hover {
+#navigation #navDropdown a:hover {
   color: #efac28;
 }
 
@@ -728,37 +705,45 @@
 
 @-webkit-keyframes flyInLeft {
   from {
-    margin-left: -375px;
+    -webkit-transform: translateX(-375px);
+            transform: translateX(-375px);
   }
   to {
-    margin-left: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 @keyframes flyInLeft {
   from {
-    margin-left: -375px;
+    -webkit-transform: translateX(-375px);
+            transform: translateX(-375px);
   }
   to {
-    margin-left: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 @-webkit-keyframes flyInRight {
   from {
-    margin-right: -500px;
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
   }
   to {
-    margin-right: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 @keyframes flyInRight {
   from {
-    margin-right: -500px;
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
   }
   to {
-    margin-right: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -777,6 +762,28 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes dummeAnimation {
+  from {
+    -webkit-transform: rotate3d(5, 5, 5, 0deg);
+            transform: rotate3d(5, 5, 5, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(5, 5, 5, 360deg);
+            transform: rotate3d(5, 5, 5, 360deg);
+  }
+}
+
+@keyframes dummeAnimation {
+  from {
+    -webkit-transform: rotate3d(5, 5, 5, 0deg);
+            transform: rotate3d(5, 5, 5, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(5, 5, 5, 360deg);
+            transform: rotate3d(5, 5, 5, 360deg);
   }
 }
 
@@ -907,5 +914,16 @@ hr {
 
 a {
   color: #ef692f;
+}
+
+#spruch {
+  font-size: 1.4rem;
+  color: #183f39;
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation: dummeAnimation 5s ease-in-out infinite;
+          animation: dummeAnimation 5s ease-in-out infinite;
 }
 /*# sourceMappingURL=style.css.map */

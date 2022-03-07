@@ -1,33 +1,33 @@
 function toggleNavMenu() 
 {
-    if (document.getElementById("navDropdown").style.transform == "none")
+    if (document.getElementById("navDropdown").style.display === "flex")
     {
-        document.getElementById("navDropdown").style.transform = "translateX(500px)";
+        document.getElementById("navDropdown").style.display = "none";
         document.getElementById("bars").style.display = "block";
         document.getElementById("xMark").style.display = "none";
     }
     else
     {
-        document.getElementById("navDropdown").style.transform = "none";
+        document.getElementById("navDropdown").style.display = "flex";
         document.getElementById("bars").style.display = "none";
         document.getElementById("xMark").style.display = "block";
-        document.getElementById("navAuth").style.transform = "translateX(-375px)";
+        document.getElementById("navAuth").style.display = "none";
         document.getElementById("userIcon").style.backgroundColor = "";
     }
 }
 
 function toggleAuthMenu()
 {
-    if (document.getElementById("navAuth").style.transform == "none")
+    if (document.getElementById("navAuth").style.display === "block")
     {
-        document.getElementById("navAuth").style.transform = "translateX(-375px)";
+        document.getElementById("navAuth").style.display = "none";
         document.getElementById("userIcon").style.backgroundColor = "";
     }
     else 
     {
-        document.getElementById("navAuth").style.transform = "none";
+        document.getElementById("navAuth").style.display = "block";
         document.getElementById("userIcon").style.backgroundColor = "#12302c";
-        document.getElementById("navDropdown").style.transform = "translateX(500px)";
+        document.getElementById("navDropdown").style.display = "none";
         document.getElementById("bars").style.display = "block";
         document.getElementById("xMark").style.display = "none";
     }
