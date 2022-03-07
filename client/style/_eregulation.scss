@@ -7,6 +7,11 @@
     align-self: flex-start;
   }
 
+@keyframes smoothText {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 #gefuehlTab {
     display: grid;
     align-self: stretch;
@@ -23,7 +28,6 @@
             cursor: pointer;
             padding: 8px 0;
             border-bottom: 1px solid #3a591cd6;
-            user-select: none;
             
             &:hover {
                 background-color: darken(#466b23, 3%);

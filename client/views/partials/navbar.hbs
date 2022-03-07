@@ -1,31 +1,51 @@
-<section id="navigation">
-  <nav id="navBar">
-    <div id="navBarLeft">
-      <div id="userIcon" onclick="toggleAuthMenu()">
-        <i class="fa-solid fa-user"></i>
-      </div>
-    </div>
-    <div id="titleBox">
-      <a href="/" id="title">DBT-Hub</a>
-    </div>
-    <div id="navBarRight">
-      <div id="bars" onclick="toggleNavMenu()">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-      <div id="xMark" onclick="toggleNavMenu()">
-        <i class="fa-solid fa-xmark fa-lg"></i>
-      </div>
-    </div>
-  </nav>
+<!-- Mobile Navigation Menu -->
+<nav id="navBar">
+    <nav class="mobileNav">
 
-  <section id="dropdownMenus">
-    <div id="navAuth">
-      {{> auth}}
-    </div>
-    <nav id="navDropdown">
-      <a href="/vexperiment">Verhaltensexperiment</a>
-      <a href="/eregulation" target="_parent">Emotionsregulation</a>
+        <nav id="mobNavBar">
+            <div id="mobNavLeft">
+                <div class="userIcon" onclick="toggleAuthMenu()">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div id="titleBox">
+                <a href="/" id="title">DBT-Hub</a>
+            </div>
+            <div id="mobNavRight">
+                <div id="bars" onclick="navMenuOpen()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div id="xMark" onclick="navMenuOpen()">
+                    <i class="fa-solid fa-xmark fa-lg"></i>
+                </div>
+            </div>
+        </nav>
+
+        <nav id="mobNavDropdown">
+            <a href="/vexperiment">VExperiment</a>
+            <a href="/eregulation" target="_parent">ERegulation</a>
+        </nav>
     </nav>
-  </section>
 
-</section>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="desktopNav">
+        <div id="deskNavLeft">
+            <a href="javascript:void(0);" class="userIcon" onclick="toggleAuthMenu()">
+                <i class="fa-solid fa-user"></i></a>
+            <a href="/vexperiment">VExperiment</a>
+        </div>
+            <div id="titleBox">
+            <a id="title" href="/">DBT-Hub</a>
+        </div>
+        <div id="deskNavRight">
+            <a href="/eregulation" target="_parent">ERegulation</a>
+        </div>
+    </nav>
+
+
+    <div id="navAuth">
+        {{> auth}}
+    </div>
+
+</nav>
