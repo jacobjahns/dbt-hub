@@ -115,13 +115,6 @@ hr{
 
 a {
   color: $primary-color;
-}
-
-#spruch {
-  font-size: 1.4rem;
-  color: $BG-color;
-  font-weight: bold;
-  align-self: center;
-  animation: dummeAnimation 5s ease-in-out infinite;
+  cursor: pointer; //fix for iphones?
 }
 /*# sourceMappingURL=style.css.map */

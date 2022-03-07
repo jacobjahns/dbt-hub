@@ -69,21 +69,21 @@ function textBoxOpen(num)
 
 //Close Popup and reset all when Container is clicked
 window.onclick = function(event) {
-    if (event.target == document.getElementById("popupContainer")) {
-        document.getElementById("popupContainer").style.visibility = "hidden";
-        document.getElementById("popupContainer").style.opacity = 0;
-        document.body.style.overflow = "auto";
-        const list = document.getElementsByClassName("popup");
-        for (const elem of list) {
-            elem.style.visibility = "hidden";
-            elem.style.opacity = 0;
-            elem.style.height = 0;
-        }
-        const emotDescrList = document.getElementsByClassName("emotDescr");
-        for (const elem of emotDescrList) {
-            elem.style.display = "none";
-        }
+  if (event.target == document.getElementById("popupContainer")) {
+    document.getElementById("popupContainer").style.visibility = "hidden";
+    document.getElementById("popupContainer").style.opacity = 0;
+    document.body.style.overflow = "auto";
+    const list = document.getElementsByClassName("popup");
+    for (const elem of list) {
+      elem.style.visibility = "hidden";
+      elem.style.opacity = 0;
+      elem.style.height = 0;
     }
+    const emotDescrList = document.getElementsByClassName("emotDescr");
+    for (const elem of emotDescrList) {
+      elem.style.display = "none";
+    }
+  }
 }
 
 //Display Popup-container and selected popups inside
@@ -221,3 +221,8 @@ setTextboxSize();
 for(let i = 0; i < textboxes.length; i++) {
     textboxes[i].addEventListener('keypress', handleInput);
 }
+
+/* document.getElementById('userIcon').ontouchstart = function (event) {
+    toggleAuthMenu();
+    toggleAuthMenu();
+ } */

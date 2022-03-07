@@ -36,11 +36,10 @@
       justify-content: flex-end;
       align-items: center;
       width: 20%;
-      div {
+      a {
         color: white;
         padding: 15px 20px;
         font-size: 32px;
-        cursor: pointer;
       }
       #xMark {
         display: none;
@@ -52,11 +51,10 @@
       justify-content: flex-start;
       align-items: center;
       width: 20%;
-      div {
+      a {
         color: white;
         padding: 15px 20px;
         font-size: 32px;
-        cursor: pointer;
       }
     }
   }

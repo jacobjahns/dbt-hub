@@ -213,11 +213,10 @@
   width: 20%;
 }
 
-#navigation #navBar #navBarRight div {
+#navigation #navBar #navBarRight a {
   color: white;
   padding: 15px 20px;
   font-size: 32px;
-  cursor: pointer;
 }
 
 #navigation #navBar #navBarRight #xMark {
@@ -238,11 +237,10 @@
   width: 20%;
 }
 
-#navigation #navBar #navBarLeft div {
+#navigation #navBar #navBarLeft a {
   color: white;
   padding: 15px 20px;
   font-size: 32px;
-  cursor: pointer;
 }
 
 #navigation #navDropdown {
@@ -765,28 +763,6 @@
   }
 }
 
-@-webkit-keyframes dummeAnimation {
-  from {
-    -webkit-transform: rotate3d(5, 5, 5, 0deg);
-            transform: rotate3d(5, 5, 5, 0deg);
-  }
-  to {
-    -webkit-transform: rotate3d(5, 5, 5, 360deg);
-            transform: rotate3d(5, 5, 5, 360deg);
-  }
-}
-
-@keyframes dummeAnimation {
-  from {
-    -webkit-transform: rotate3d(5, 5, 5, 0deg);
-            transform: rotate3d(5, 5, 5, 0deg);
-  }
-  to {
-    -webkit-transform: rotate3d(5, 5, 5, 360deg);
-            transform: rotate3d(5, 5, 5, 360deg);
-  }
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -914,16 +890,6 @@ hr {
 
 a {
   color: #ef692f;
-}
-
-#spruch {
-  font-size: 1.4rem;
-  color: #183f39;
-  font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-animation: dummeAnimation 5s ease-in-out infinite;
-          animation: dummeAnimation 5s ease-in-out infinite;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
