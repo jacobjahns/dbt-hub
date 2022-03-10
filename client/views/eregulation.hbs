@@ -10,129 +10,127 @@
 {{> navbar}}
 
 <main>
-
-    <section class="header">
+    <section id="gefuehlTable">
         <h1>Emotionsregulation</h1>
         <hr>
-    </section>
-
-    <a href="#explanation" class="linkClassic">Wie funktioniert es?</a>
-    <section id="gefuehlTab">
-        <div class="gefuehlBox" onclick="textBoxOpen(0)">
-            <div>Trauer</div>
-            <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
-            <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
-        </div>
-        <div class="iconBox" onclick="popupOpen(0,'Trauer')">
-            <i class="fa-solid fa-arrow-right-long"></i>
-        </div>
-        <div class="explBox">
-            <div>
-                <span>Wahrnehmung</span>
-                <ul>
-                    <li>Umgebung wirkt fahl, leer</li>
-                    <li>Gefühl von Verzweiflung, Zerissenheit</li>
-                </ul>
+        <a href="#explanation" class="linkClassic">Wie funktioniert es?</a>
+        <div id="table">
+            <div class="gefuehlBox" onclick="textBoxOpen(0)">
+                <div>Trauer</div>
+                <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
+                <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
             </div>
-            <div>
-                <span>Handlungsdrang</span>
-                <ul>
-                    <li>Rückzug aus Verantwortung, Beziehungen</li>
-                    <li>Signal nach Trost and die Umgebung</li>
-                </ul>
+            <div class="iconBox" onclick="popupOpen(0,'Trauer')">
+                <i class="fa-solid fa-arrow-right-long"></i>
             </div>
-            <div>
-                <span>Körperreaktion</span>
-                <ul>
-                    <li>Weinen, Klagen, Müdigkeit</li>
-                    <li>Atemnot, Schmerz in der Brust</li>
-                </ul>
+            <div class="explBox">
+                <div>
+                    <span>Wahrnehmung</span>
+                    <ul>
+                        <li>Umgebung wirkt fahl, leer</li>
+                        <li>Gefühl von Verzweiflung, Zerissenheit</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Handlungsdrang</span>
+                    <ul>
+                        <li>Rückzug aus Verantwortung, Beziehungen</li>
+                        <li>Signal nach Trost and die Umgebung</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Körperreaktion</span>
+                    <ul>
+                        <li>Weinen, Klagen, Müdigkeit</li>
+                        <li>Atemnot, Schmerz in der Brust</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="gefuehlBox" onclick="textBoxOpen(1)">
-            <div>Wut/Ärger</div>
-            <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
-            <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>            
-        </div>
-        <div class="iconBox" onclick="popupOpen(0,'Wut')">
-            <i class="fa-solid fa-arrow-right-long"></i>
-        </div>
-        <div class="explBox">
-            <div>
-                <span>Wahrnehmung</span>
-                <ul>
-                    <li>starker Fokus auf sich selbst</li>
-                    <li>Suche nach Bestätigung der eigenen Wahrnehmung</li>
-                </ul>
+            <div class="gefuehlBox" onclick="textBoxOpen(1)">
+                <div>Wut/Ärger</div>
+                <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
+                <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>            
             </div>
-            <div>
-                <span>Handlungsdrang</span>
-                <ul>
-                    <li>physisch, verbal anzugreifen</li>
-                    <li>aggressive drohende Gesten</li>
-                </ul>
+            <div class="iconBox" onclick="popupOpen(0,'Wut')">
+                <i class="fa-solid fa-arrow-right-long"></i>
             </div>
-            <div>
-                <span>Körperreaktion</span>
-                <ul>
-                    <li>muskuläre Anspannung wie Fäuste ballen</li>
-                    <li>Gesicht rot, warm</li>
-                    <li>Bereitschaft loszubrüllen, zu weinen</li>
-                </ul>
+            <div class="explBox">
+                <div>
+                    <span>Wahrnehmung</span>
+                    <ul>
+                        <li>starker Fokus auf sich selbst</li>
+                        <li>Suche nach Bestätigung der eigenen Wahrnehmung</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Handlungsdrang</span>
+                    <ul>
+                        <li>physisch, verbal anzugreifen</li>
+                        <li>aggressive drohende Gesten</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Körperreaktion</span>
+                    <ul>
+                        <li>muskuläre Anspannung wie Fäuste ballen</li>
+                        <li>Gesicht rot, warm</li>
+                        <li>Bereitschaft loszubrüllen, zu weinen</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-                <div class="gefuehlBox" onclick="textBoxOpen(2)">
-            <div>Angst</div>
-            <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
-            <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
-        </div>
-        <div class="iconBox" onclick="popupOpen(0,'Angst')">
-            <i class="fa-solid fa-arrow-right-long"></i>
-        </div>
-        <div class="explBox">
-            <div>
-                <span>Wahrnehmung</span>
-                <ul>
-                    <li>Fokus auf Signale für Gefahr</li>
-                    <li>Erinnerung an frühere Angstsituation</li>
-                    <li>Dissoziation bei starker Angst</li>
-                </ul>
+                    <div class="gefuehlBox" onclick="textBoxOpen(2)">
+                <div>Angst</div>
+                <i class="iconExpl fa-solid fa-arrow-down-wide-short"></i>
+                <i class="iconExpl fa-solid fa-arrow-up-short-wide" style="display: none;"></i>
             </div>
-            <div>
-                <span>Handlungsdrang</span>
-                <ul>
-                    <li>fliehen, angreifen, Hilfe suchen</li>
-                </ul>
+            <div class="iconBox" onclick="popupOpen(0,'Angst')">
+                <i class="fa-solid fa-arrow-right-long"></i>
             </div>
-            <div>
-                <span>Körperreaktion</span>
-                <ul>
-                    <li>auf Kampf, Flucht, Totstellen vorbereiten</li>
-                    <li>Herzklopfen, Kloß im Hals, Sprachstörung, Durchfall, schnelle Atmung</li>
-                    <li>dissoziative Symptome</li>
-                </ul>
+            <div class="explBox">
+                <div>
+                    <span>Wahrnehmung</span>
+                    <ul>
+                        <li>Fokus auf Signale für Gefahr</li>
+                        <li>Erinnerung an frühere Angstsituation</li>
+                        <li>Dissoziation bei starker Angst</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Handlungsdrang</span>
+                    <ul>
+                        <li>fliehen, angreifen, Hilfe suchen</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Körperreaktion</span>
+                    <ul>
+                        <li>auf Kampf, Flucht, Totstellen vorbereiten</li>
+                        <li>Herzklopfen, Kloß im Hals, Sprachstörung, Durchfall</li>
+                        <li>dissoziative Symptome</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="explanation">
-        <h2>Wie funktioniert es?</h2>
-        <hr>
-        <div>Wähle dein aktuelles Gefühl aus und klicke auf den Pfeil der nach rechts zeigt.</div>
-        <div>Wenn du dir bei einem Gefühl nicht sicher bist, klicke auf den Pfeil daneben, um eine Beschreibung zu bekommen.</div>
-        <div>Dann werden dir nacheinander 3 Fragen zum Gefühl gestellt.</div>
+        <div class="textbox">
+            <h2>Wie funktioniert es?</h2>
+            <hr>
+            <div>Wähle dein aktuelles Gefühl aus und klicke auf den Pfeil der nach rechts zeigt.</div>
+            <div>Wenn du dir bei einem Gefühl nicht sicher bist, klicke auf den Pfeil daneben, um eine Beschreibung zu bekommen.</div>
+            <div>Dann werden dir nacheinander 3 Fragen zum Gefühl gestellt.</div>
+            <ol>
+                <li>Kann ich noch sinnvoll Handeln?</li>
+                <li>Ist mein Gefühl der Situation angemessen?</li>
+                <li>Ist mein Handlungsimpuls auch langfristig sinnvoll?</li>
+            </ol>
+            <div>Wenn du alle Fragen mit "Daumen hoch" bestätigen kannst, folge dem Handlungsimpuls des Gefühls.</div>
+            <div>Ansonsten muss das Gefühl abgeschwächt werden!</div>
+            <div>Das tust du, indem du dich entgegengesetzt zum Handlungsimpuls verhälst.</div>
+            <div>Dabei geht es allerdings nicht um Verdrängung, sondern um einen funktionaleren Weg mit der Emotion umzugehen.</div>
+            <div>Nachdem das Gefühl abgeschwächt wurde, solltest du daher nochmal reflektieren, wie du richtig (funktional) handelst.</div>
         </div>
-        <ol>
-            <li>Kann ich noch sinnvoll Handeln?</li>
-            <li>Ist mein Gefühl der Situation angemessen?</li>
-            <li>Ist mein Handlungsimpuls auch langfristig sinnvoll?</li>
-        </ol>
-        <div>Wenn du alle Fragen mit "Daumen hoch" bestätigen kannst, folge dem Handlungsimpuls des Gefühls.</div>
-        <div>Ansonsten muss das Gefühl abgeschwächt werden!</div>
-        <div>Das tust du, indem du dich entgegengesetzt zum Handlungsimpuls verhälst.</div>
-        <div>Dabei geht es allerdings nicht um Verdrängung, sondern um einen funktionaleren Weg mit der Emotion umzugehen.</div>
-        <div>Nachdem das Gefühl abgeschwächt wurde, solltest du daher nochmal reflektieren, wie du richtig (funktional) handelst.</div>
-        
     </section>
 
     <dev id="popupContainer">

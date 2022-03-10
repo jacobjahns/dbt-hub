@@ -1,80 +1,84 @@
 @import '_variables.scss';
 
-/* Gefühl-Table */
+#gefuehlTable {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 
-.linkClassic {
-    padding: 0 0 3px 15px;
-    align-self: flex-start;
-  }
+    .linkClassic {
+        margin-bottom: 2px;
+        align-self: flex-start;
+    }
 
-#gefuehlTab {
-    display: grid;
-    align-self: stretch;
-    grid-template-columns: auto 80px;
-    grid-auto-rows: auto;
-    margin: 0;
+    #table {
+        display: grid;
+        align-self: center;
+        grid-template-columns: auto 80px;
+        grid-auto-rows: auto;
+        width: 100%;
 
-    div {
-        &.gefuehlBox {
-            background-color: #466b23;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            padding: 8px 0;
-            border-bottom: 1px solid #3a591cd6;
-            user-select: none;
-            
-            &:hover {
-                background-color: darken(#466b23, 3%);
-            }
-
-            div,i {
-                color: white;
-                text-decoration: none;
-                font-size: 2rem;
-                margin: 0 10px;
-            }
-        }
-        &.iconBox {
-            background-color: #ef692f;
-            font-size: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            border-bottom: 1px solid #ca5928e6;
-            color: white;
-
-            i {
-                transition: all 0.4s ease-out;
-            }
-            &:hover i {
-                margin-left: 8px;
-            }
-        }
-        &.explBox {
-            background-color: darken(#466b23, 6%);
-            display: none; //flex
-            border: 1px inset #466b23;
-            justify-content: flex-start;
-            flex-direction: row;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            grid-column: 1 / span 2;
-            padding: 5px 0;
-
-            div{
-                animation: smoothText 0.1s ease-out;
-                padding-left: 10px;
-                span {
-                    font-size: 1.5rem;
-                    color: #eee;
+        div {
+            &.gefuehlBox {
+                background-color: #466b23;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                padding: 8px 0;
+                border-bottom: 1px solid #3a591cd6;
+                user-select: none;
+                
+                &:hover {
+                    background-color: lighten(#466b23, 3%);
                 }
-                ul {
-                    font-size: 1.1rem;
-                    color: #eee;
-                    margin: 1px 0 4px 16px;
+
+                div,i {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    margin: 0 10px;
+                }
+            }
+            &.iconBox {
+                background-color: #ef692f;
+                font-size: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                border-bottom: 1px solid #ca5928e6;
+                color: white;
+
+                i {
+                    transition: all 0.4s ease-out;
+                }
+                &:hover i {
+                    margin-left: 8px;
+                }
+            }
+            &.explBox {
+                background-color: darken(#466b23, 6%);
+                display: none; //flex
+                border: 1px inset #466b23;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                grid-column: 1 / span 2;
+                padding: 5px 0;
+
+                div{
+                    animation: smoothText 0.1s ease-out;
+                    padding-left: 10px;
+                    span {
+                        font-size: 1.5rem;
+                        color: #eee;
+                    }
+                    ul {
+                        font-size: 1.1rem;
+                        color: #eee;
+                        margin: 1px 0 4px 16px;
+                    }
                 }
             }
         }
@@ -221,9 +225,6 @@
 #explanation {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-
     h2 {
         font-size: 1.4rem;
     }
