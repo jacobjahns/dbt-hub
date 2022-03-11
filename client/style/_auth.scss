@@ -30,12 +30,12 @@
 
     .auth-headline {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       padding: 6px 0;
     }
     .auth-other {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -58,7 +58,7 @@
 
         label {
           color: white;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
 
           input{
             width: 1rem;
@@ -70,7 +70,7 @@
       }
 
       input {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
 
         &[type="submit"] {
           &:active {
@@ -86,7 +86,7 @@
       justify-content: center;
 
       a {
-        font-size: 1rem;
+        font-size: .9rem;
       }
     } 
   }

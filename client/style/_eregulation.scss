@@ -7,6 +7,7 @@
 
     .linkClassic {
         margin-bottom: 2px;
+        margin-left: 10px;
         align-self: flex-start;
     }
 
@@ -16,6 +17,7 @@
         grid-template-columns: auto 80px;
         grid-auto-rows: auto;
         width: 100%;
+        box-shadow: 0 2px 8px 1px rgba(64,60,67,.24);
 
         div {
             &.gefuehlBox {
@@ -59,16 +61,16 @@
             &.explBox {
                 background-color: darken(#466b23, 6%);
                 display: none; //flex
-                border: 1px inset #466b23;
                 justify-content: flex-start;
                 flex-direction: row;
                 align-items: flex-start;
                 flex-wrap: wrap;
                 grid-column: 1 / span 2;
                 padding: 5px 0;
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15) inset;
 
                 div{
-                    animation: smoothText 0.1s ease-out;
+                    animation: smoothText 0.15  s ease-out;
                     padding-left: 10px;
                     span {
                         font-size: 1.5rem;
