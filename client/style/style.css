@@ -494,7 +494,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   opacity: 0;
-  z-index: 10002;
+  z-index: 999999;
   left: 0;
   top: 0;
   margin: 0;

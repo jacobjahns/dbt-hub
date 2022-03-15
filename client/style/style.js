@@ -1,5 +1,36 @@
-function toggleNavMenu() 
+//Close Popup and reset all when Background is clicked
+window.onclick = function(event) 
 {
+    if (event.target == document.getElementById("popupContainer")) {
+      document.getElementById("popupContainer").style.visibility = "hidden";
+      document.getElementById("popupContainer").style.opacity = 0;
+      document.body.style.overflow = "auto";
+      const list = document.getElementsByClassName("popup");
+      for (const elem of list) {
+        elem.style.visibility = "hidden";
+        elem.style.opacity = 0;
+        elem.style.height = 0;
+      }
+      const emotDescrList = document.getElementsByClassName("emotDescr");
+      for (const elem of emotDescrList) {
+        elem.style.display = "none";
+      }
+    }
+}
+
+//the last selection method (click or touch)
+let lastMethod = 'empty';
+
+function toggleNavMenu(method)
+{
+    if (lastMethod != 'empty') //the first time it shouldn't trigger
+    {
+        if (lastMethod != method) //only use the first selection method to only trigger it once
+        {
+            console.log(method,lastMethod)
+            return;
+        }    
+    }
     if (document.getElementById("navDropdown").style.display === "flex")
     {
         document.getElementById("navDropdown").style.display = "none";
@@ -14,10 +45,20 @@ function toggleNavMenu()
         document.getElementById("navAuth").style.display = "none";
         document.getElementById("userIcon").style.backgroundColor = "";
     }
+    lastMethod = method;
 }
 
-function toggleAuthMenu()
+function toggleAuthMenu(method)
 {
+    if (lastMethod != 'empty') //the first time it shouldn't trigger
+    {
+        if (lastMethod != method) //only use the first selection method to only trigger it once
+        {
+            console.log(method,lastMethod)
+            return;
+        }    
+    }
+
     if (document.getElementById("navAuth").style.display === "block")
     {
         document.getElementById("navAuth").style.display = "none";
@@ -31,6 +72,7 @@ function toggleAuthMenu()
         document.getElementById("bars").style.display = "block";
         document.getElementById("xMark").style.display = "none";
     }
+    lastMethod = method;
 }
 
 //Open/Close Selected Explanation Boxes
@@ -65,25 +107,6 @@ function textBoxOpen(num)
         coll[num2].style.display = "inline-block";
         coll[num2+1].style.display = "none";
     }
-}
-
-//Close Popup and reset all when Container is clicked
-window.onclick = function(event) {
-  if (event.target == document.getElementById("popupContainer")) {
-    document.getElementById("popupContainer").style.visibility = "hidden";
-    document.getElementById("popupContainer").style.opacity = 0;
-    document.body.style.overflow = "auto";
-    const list = document.getElementsByClassName("popup");
-    for (const elem of list) {
-      elem.style.visibility = "hidden";
-      elem.style.opacity = 0;
-      elem.style.height = 0;
-    }
-    const emotDescrList = document.getElementsByClassName("emotDescr");
-    for (const elem of emotDescrList) {
-      elem.style.display = "none";
-    }
-  }
 }
 
 //Display Popup-container and selected popups inside
